@@ -56,7 +56,7 @@ async def movie_command(client, message):
                 "Please enter a movie name after the /movie command."
             )
     except Exception as e:
-        await message.reply_text(f"An error occurred: {str(e)}")
+        await message.reply_text(f"ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ: {str(e)}")
 
 
 def get_movie_info(movie_name):

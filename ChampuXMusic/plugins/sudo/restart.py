@@ -56,7 +56,7 @@ async def handle_refresh_logs(_, query: CallbackQuery):
         )
 
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ: {e}")
 
 
 @app.on_message(
@@ -88,7 +88,7 @@ async def log_(client, message, _):
         )
 
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ: {e}")
 
 
 @app.on_message(

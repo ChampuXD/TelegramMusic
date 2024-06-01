@@ -8,7 +8,7 @@ from ChampuXMusic import app
 @app.on_message(filters.command(["github", "git"]))
 async def github(_, message):
     if len(message.command) != 2:
-        await message.reply_text("/git Champu-BOY-OP")
+        await message.reply_text("/git TheChampu")
         return
 
     username = message.text.split(None, 1)[1]

@@ -50,5 +50,5 @@ async def check_bots_command(client, message):
                 "ɪɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀᴍᴀᴛ.\n\nᴘʟᴇᴀsᴇ ᴜsᴇ /botschk Bot_Username\n\nʟɪᴋᴇ :- `/botschk @TheChampuBot`"
             )
     except Exception as e:
-        await message.reply_text(f"An error occurred: {e}")
-        print(f"Error occurred during /botschk command: {e}")
+        await message.reply_text(f"ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ: {e}")
+        print(f"ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ ᴅᴜʀɪɴɢ /botschk ᴄᴏᴍᴍᴀɴᴅ: {e}")

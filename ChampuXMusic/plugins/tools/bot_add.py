@@ -62,4 +62,4 @@ async def join_watcher(_, message):
                 await Ok.delete()
 
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"ᴇʀʀᴏʀ: {e}")

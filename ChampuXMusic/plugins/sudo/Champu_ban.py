@@ -8,27 +8,27 @@ from ChampuXMusic.misc import SUDOERS
 from ChampuXMusic.utils.Champu_ban import admin_filter
 
 Champu_text = [
-    "hey please don't disturb me.",
-    "who are you",
-    "aap kon ho",
-    "aap mere owner to nhi lgte ",
-    "hey tum mera name kyu le rhe ho meko sone do",
-    "ha bolo kya kaam hai ",
-    "dekho abhi mai busy hu ",
-    "hey i am busy",
-    "aapko smj nhi aata kya ",
-    "leave me alone",
-    "dude what happend",
+    "ʜᴇʏ ᴘʟᴇᴀsᴇ ᴅᴏɴ'ᴛ ᴅɪsᴛᴜʀʙ ᴍᴇ.",
+    "ᴡʜᴏ ᴀʀᴇ ʏᴏᴜ",
+    "ᴀᴀᴘ ᴋᴏɴ ʜᴏ",
+    "ᴀᴀᴘ ᴍᴇʀᴇ ᴏᴡɴᴇʀ ᴛᴏ ɴʜɪ ʟɢᴛᴇ ",
+    "ʜᴇʏ ᴛᴜᴍ ᴍᴇʀᴀ ɴᴀᴍᴇ ᴋʏᴜ ʟᴇ ʀʜᴇ ʜᴏ ᴍᴇᴋᴏ sᴏɴᴇ ᴅᴏ",
+    "ʜᴀ ʙᴏʟᴏ ᴋʏᴀ ᴋᴀᴀᴍ ʜᴀɪ ",
+    "ᴅᴇᴋʜᴏ ᴀʙʜɪ ᴍᴀɪ ʙᴜsʏ ʜᴜ ",
+    "ʜᴇʏ ɪ ᴀᴍ ʙᴜsʏ",
+    "ᴀᴀᴘᴋᴏ sᴍᴊ ɴʜɪ ᴀᴀᴛᴀ ᴋʏᴀ ",
+    "ʟᴇᴀᴠᴇ ᴍᴇ ᴀʟᴏɴᴇ",
+    "ᴅᴜᴅᴇ ᴡʜᴀᴛ ʜᴀᴘᴘᴇɴᴅ",
 ]
 
 strict_txt = [
-    "i can't restrict against my besties",
-    "are you serious i am not restrict to my friends",
-    "fuck you bsdk k mai apne dosto ko kyu kru",
-    "hey stupid admin ",
-    "ha ye phele krlo maar lo ek dusre ki gwaand",
-    "i can't hi is my closest friend",
-    "i love him please don't restict this user try to usertand ",
+    "ɪ ᴄᴀɴ'ᴛ ʀᴇsᴛʀɪᴄᴛ ᴀɢᴀɪɴsᴛ ᴍʏ ʙᴇsᴛɪᴇs",
+    "ᴀʀᴇ ʏᴏᴜ sᴇʀɪᴏᴜs ɪ ᴀᴍ ɴᴏᴛ ʀᴇsᴛʀɪᴄᴛ ᴛᴏ ᴍʏ ғʀɪᴇɴᴅs",
+    "ғᴜᴄᴋ ʏᴏᴜ ʙsᴅᴋ ᴋ ᴍᴀɪ ᴀᴘɴᴇ ᴅᴏsᴛᴏ ᴋᴏ ᴋʏᴜ ᴋʀᴜ",
+    "ʜᴇʏ sᴛᴜᴘɪᴅ ᴀᴅᴍɪɴ ",
+    "ʜᴀ ʏᴇ ᴘʜᴇʟᴇ ᴋʀʟᴏ ᴍᴀᴀʀ ʟᴏ ᴇᴋ ᴅᴜsʀᴇ ᴋɪ ɢᴡᴀᴀɴᴅ",
+    "ɪ ᴄᴀɴ'ᴛ ʜɪ ɪs ᴍʏ ᴄʟᴏsᴇsᴛ ғʀɪᴇɴᴅ",
+    "ɪ ʟᴏᴠᴇ ʜɪᴍ ᴘʟᴇᴀsᴇ ᴅᴏɴ'ᴛ ʀᴇsᴛɪᴄᴛ ᴛʜɪs ᴜsᴇʀ ᴛʀʏ ᴛᴏ ᴜsᴇʀᴛᴀɴᴅ ",
 ]
 
 
@@ -48,7 +48,7 @@ channel = ["channel"]
 # ========================================= #
 
 
-@app.on_message(filters.command(["ip", "iyush"], prefixes=["V", "P"]) & admin_filter)
+@app.on_message(filters.command(["hampu"], prefixes=["C", "c"]) & admin_filter)
 async def restriction_app(app: app, message):
     reply = message.reply_to_message
     chat_id = message.chat.id
@@ -67,7 +67,7 @@ async def restriction_app(app: app, message):
                 else:
                     await app.ban_chat_member(chat_id, user_id)
                     await message.reply(
-                        "OK, Ban kar diya madrchod ko sala Chutiya tha !"
+                        "OK, Ban kar diya!"
                     )
 
         for unbanned in data:
@@ -85,7 +85,7 @@ async def restriction_app(app: app, message):
                 else:
                     await app.ban_chat_member(chat_id, user_id)
                     await app.unban_chat_member(chat_id, user_id)
-                    await message.reply("get lost! bhga diya bhosdi wale ko")
+                    await message.reply("get lost!")
 
         for muted in data:
             print(f"present {muted}")
@@ -96,7 +96,7 @@ async def restriction_app(app: app, message):
                 else:
                     permissions = ChatPermissions(can_send_messages=False)
                     await message.chat.restrict_member(user_id, permissions)
-                    await message.reply(f"muted successfully! Disgusting people.")
+                    await message.reply(f"muted successfully!")
 
         for unmuted in data:
             print(f"present {unmuted}")

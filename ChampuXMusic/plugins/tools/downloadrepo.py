@@ -11,7 +11,7 @@ from ChampuXMusic import app
 def download_repo(_, message):
     if len(message.command) != 2:
         message.reply_text(
-            "Please provide the GitHub repository URL after the command. Example: /downloadrepo Repo Url "
+            "ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇ ɢɪᴛʜᴜʙ ʀᴇᴘᴏsɪᴛᴏʀʏ ᴜʀʟ ᴀғᴛᴇʀ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ. ᴇxᴀᴍᴘʟᴇ: /downloadrepo ʀᴇᴘᴏ ᴜʀʟ "
         )
         return
 
@@ -23,7 +23,7 @@ def download_repo(_, message):
             message.reply_document(zip_file)
         os.remove(zip_path)
     else:
-        message.reply_text("Unable to download the specified GitHub repository.")
+        message.reply_text("ᴜɴᴀʙʟᴇ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴛʜᴇ sᴘᴇᴄɪғɪᴇᴅ ɢɪᴛʜᴜʙ ʀᴇᴘᴏsɪᴛᴏʀʏ.")
 
 
 def download_and_zip_repo(repo_url):
@@ -39,7 +39,7 @@ def download_and_zip_repo(repo_url):
 
         return f"{repo_path}.zip"
     except Exception as e:
-        print(f"Error downloading and zipping GitHub repository: {e}")
+        print(f"ᴇʀʀᴏʀ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴀɴᴅ ᴢɪᴘᴘɪɴɢ ɢɪᴛʜᴜʙ ʀᴇᴘᴏsɪᴛᴏʀʏ: {e}")
         return None
     finally:
         if os.path.exists(repo_path):

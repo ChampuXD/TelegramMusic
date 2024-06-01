@@ -176,11 +176,11 @@ async def list_cloned_bots(client, message):
 @app.on_message(filters.command("delallclone") & SUDOERS)
 async def delete_all_cloned_bots(client, message):
     try:
-        a = await message.reply_text("**Deleting all cloned bots...**")
+        a = await message.reply_text("**ᴅᴇʟᴇᴛɪɴɢ ᴀʟʟ ᴄʟᴏɴᴇᴅ ʙᴏᴛs...**")
         await clonebotdb.delete_many({})
         CLONES.clear()
 
-        await a.edit_text("**All cloned bots have been deleted successfully ✅**")
+        await a.edit_text("**ᴀʟʟ ᴄʟᴏɴᴇᴅ ʙᴏᴛs ʜᴀᴠᴇ ʙᴇᴇɴ ᴅᴇʟᴇᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ✅**")
     except Exception as e:
-        await a.edit_text(f"**An error occurred while deleting all cloned bots.** {e}")
+        await a.edit_text(f"**ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ ᴡʜɪʟᴇ ᴅᴇʟᴇᴛɪɴɢ ᴀʟʟ ᴄʟᴏɴᴇᴅ ʙᴏᴛs.** {e}")
         logging.exception(e)
