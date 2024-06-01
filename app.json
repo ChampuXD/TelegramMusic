@@ -1,74 +1,64 @@
 {
-    "name": "🌹⃝𖣔𝐕𝐈𝐏 𝐌𝐔𝐒𝐈𝐂🥀⛦⃕‌🇮🇳",
-    "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://te.legra.ph/file/3a131483d8a27dbf41b3a.jpg",
-    "keywords": [
-    "python3",
-    "telegram",
-    "bot",
-    "Champu",
-    "MusicBot",
-    "telegram-bot",
-    "pyrogram"
-    ],
+  "name": "ᴄʜᴧᴍᴘᴜ ꭙ ᴍᴜsɪᴄ",
+  "description": "ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴘʏᴛʜᴏɴ ᴡɪᴛʜ ᴘʏʀᴏɢʀᴀᴍ ᴀɴᴅ ᴘʏ-ᴛɢᴄᴀʟʟs.",
+  "logo": "https://telegra.ph/file/30127eafe764b7ca80576.jpg",
+  "keywords": [
+  "python3",
+  "telegram",
+  "bot",
+  "Champu",
+  "MusicBot",
+  "telegram-bot",
+  "pyrogram"
+  ],
     "env": {
       "API_ID": {
-        "description": "𝐆𝐄𝐓 𝐀𝐏𝐈 𝐈𝐃 𝐅𝐑𝐎𝐌 https://my.telegram.org",
-        "value": "14050586",
+        "description": "ɢᴇᴛ ᴀᴘɪ ʜᴀsʜ ғʀᴏᴍ https://my.telegram.org",
+        "value": "",
         "required": true
       },
       "API_HASH": {
-        "description": "𝐆𝐄𝐓 𝐀𝐏𝐈 𝐇𝐀𝐒𝐇 𝐅𝐑𝐎𝐌 https://my.telegram.org",
-        "value": "42a60d9c657b106370c79bb0a8ac560c",
+        "description": "ɢᴇᴛ ʙᴏᴛ's ᴛᴏᴋᴇɴ ғʀᴏᴍ ʙᴏᴛғᴀᴛʜᴇʀ",
+        "value": "",
         "required": true
       },
       "BOT_TOKEN": {
-        "description": "𝐆𝐄𝐓 𝐁𝐎𝐓 𝐓𝐎𝐊𝐄𝐍 𝐅𝐑𝐎𝐌 𝐁𝐎𝐓 𝐅𝐀𝐓𝐇𝐄𝐑",
+        "description": "ᴘᴜᴛ ʏᴏᴜʀ ʙᴏᴛ's ᴜsᴇʀɴᴀᴍᴇ ᴡɪᴛʜᴏᴜᴛ ᴜsɪɴɢ @",
         "value": "",
         "required": true
       },
       "MONGO_DB_URI": {
-        "description": "𝐆𝐄𝐓 𝐀 𝐌𝐎𝐍𝐆𝐎𝐃𝐁 𝐔𝐑𝐋 𝐅𝐑𝐎𝐌 https://cloud.mongodb.com. 𝐈𝐅 𝐘𝐎𝐔 𝐃𝐎𝐍𝐓 𝐇𝐀𝐕𝐄 𝐓𝐇𝐄𝐍 𝐔𝐒𝐄 𝐀𝐋𝐑𝐄𝐀𝐃𝐘 𝐅𝐈𝐋𝐋𝐄𝐃 𝐌𝐎𝐍𝐆𝐎.",
-        "value": "mongodb+srv://Krishna:pss968048@cluster0.4rfuzro.mongodb.net/?retryWrites=true&w=majority",
+        "description": "ɢᴇᴛ ᴀ ᴍᴏɴɢᴏᴅʙ ᴜʀʟ ғʀᴏᴍ https://cloud.mongodb.com.",
+        "value": "",
         "required": true
       },
       "OWNER_ID": {
-        "description": "𝐅𝐈𝐋𝐋 𝐇𝐄𝐑𝐄 𝐎𝐖𝐍𝐄𝐑 𝐈𝐃, 𝐔 𝐂𝐀𝐍 𝐔𝐒𝐄 𝐌𝐎𝐑𝐄 𝐏𝐄𝐑𝐒𝐎𝐍 𝐈𝐃 𝐁𝐘 𝐆𝐈𝐕𝐄𝐈𝐍𝐆 𝐒𝐏𝐀𝐂𝐄 𝐀𝐅𝐓𝐄𝐑 𝐎𝐍𝐄 𝐈𝐃.",
-        "value": "1808943146",
+        "description": "ᴛʜᴇ ᴜsᴇʀ ɪᴅ ᴏғ ᴜsᴇʀ ᴡʜᴏᴍ ʏᴏᴜ ᴡᴏᴜʟᴅ ʟɪᴋᴇ ᴛᴏ ᴀᴅᴅ ᴀs ᴏᴡɴᴇʀ..",
+        "value": "6399386263",
         "required": true
       },
       "STRING_SESSION": {
-        "description": "𝐅𝐈𝐋𝐋 𝐇𝐄𝐑𝐄 𝐀  𝐏𝐘𝐑𝐎𝐆𝐑𝐀𝐌 V2 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍, 𝐈𝐅 𝐄𝐑𝐑𝐎𝐑 𝐓𝐇𝐄𝐍 𝐒𝐄𝐍𝐃 𝐄𝐑𝐑𝐎𝐑 𝐒𝐒 𝐓𝐎 𝐑𝐄𝐏𝐎 𝐎𝐖𝐍𝐄𝐑.( 𝐆𝐄𝐓 𝐅𝐑𝐎𝐌 = t.me/Champu_STRING_ROBOT ) . ",
+        "description": "ᴀ ᴘʏʀᴏɢʀᴀᴍ ᴠ𝟸 sᴛʀɪɴɢ sᴇssɪᴏɴ ғʀᴏᴍ @ChampuStringBot ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ. ",
         "value": "",
         "required": true
       },
       "HEROKU_API_KEY": {
-        "description": "𝐅𝐈𝐋𝐋 𝐇𝐄𝐑𝐄 𝐘𝐎𝐔𝐑 𝐇𝐄𝐑𝐎𝐊𝐔 𝐀𝐂𝐂. 𝐀𝐏𝐈 𝐊𝐄𝐘, 𝐈𝐅 𝐃𝐎𝐍𝐓 𝐊𝐍𝐎𝐖 𝐓𝐇𝐈𝐒 𝐓𝐇𝐄𝐍 𝐋𝐄𝐀𝐕𝐄 𝐓𝐇𝐈𝐒 𝐋𝐈𝐍𝐄 𝐁𝐋𝐀𝐍𝐊",
+        "description": "ʏᴏᴜʀ ʜᴇʀᴏᴋᴜ ᴀᴄᴄᴏᴜɴᴛ's ᴀᴘɪ ᴋᴇʏ",
         "value": "",
         "required": false
       },
       "HEROKU_APP_NAME": {
-        "description": "𝐅𝐈𝐋𝐋 𝐇𝐄𝐑𝐄 𝐘𝐎𝐔𝐑 𝐀𝐏𝐏 𝐍𝐀𝐌𝐄 𝐖𝐇𝐈𝐂𝐇 𝐅𝐈𝐋𝐋𝐄𝐃 𝐈𝐍 𝐘𝐎𝐈𝐑 𝐅𝐈𝐑𝐒𝐓 𝐋𝐈𝐍𝐄 (𝐀𝐏𝐏 𝐍𝐀𝐌𝐄).",
-        "value": "",
-        "required": false
-      },
-      "AUTO_GCAST": {
-        "description": "𝐅𝐈𝐋𝐋 𝐇𝐄𝐑𝐄:- [On/Off] 𝐅𝐎𝐑 On/Off 𝐀𝐔𝐓𝐎 𝐆𝐂𝐀𝐒𝐓/𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓 𝐌𝐄𝐒𝐒𝐀𝐆𝐄.",
-        "value": "",
-        "required": false
-      },
-      "AUTO_GCAST_MSG": {
-        "description": "𝐅𝐈𝐋𝐋 𝐇𝐄𝐑𝐄 𝐀𝐔𝐓𝐎 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓 𝐌𝐄𝐒𝐒𝐀𝐆𝐄 𝐖𝐇𝐈𝐂𝐇 𝐖𝐈𝐋𝐋 𝐁𝐄 𝐀𝐔𝐓𝐎 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓𝐄𝐃 𝐓𝐖𝐈𝐂𝐄 𝐈𝐍 𝐀 𝐃𝐀𝐘. ( 𝐀𝐍𝐘 𝐓𝐘𝐏𝐄 𝐎𝐅 𝐌𝐄𝐒𝐒𝐀𝐆𝐄 𝐘𝐎𝐔 𝐂𝐀𝐍 𝐂𝐎𝐏𝐘 𝐀𝐍𝐃 𝐏𝐀𝐒𝐓𝐄 𝐇𝐄𝐑𝐄 )",
+        "description": "ʏᴏᴜʀ ʜᴇʀᴏᴋᴜ ᴀᴘᴘ ɴᴀᴍᴇ.",
         "value": "",
         "required": false
       },
       "START_IMG_URL": {
-        "description": "𝐅𝐈𝐋𝐋 𝐇𝐄𝐑𝐄 𝐘𝐎𝐔𝐑 𝐒𝐓𝐀𝐑𝐓 𝐁𝐎𝐓 𝐈𝐌𝐀𝐆𝐄 𝐔𝐑𝐋, 𝐆𝐄𝐓 𝐈𝐓 𝐅𝐑𝐎𝐌 ;- t.me/vTelegraphBot",
-        "value": "https://te.legra.ph/file/ecdeac045f4045c198bd6.jpg",
+        "description": "ғɪʟʟ ʜᴇʀᴇ ʏᴏᴜʀ sᴛᴀʀᴛ ɪᴍᴀɢᴇ ᴜʀʟ, ɢᴇᴛ ɪᴛ ғʀᴏᴍ @TheChampuBot ᴜsɪɴɢ /tgm ᴄᴏᴍᴍᴀɴᴅ",
+        "value": "",
         "required": false
       },
       "LOGGER_ID": {
-        "description": "𝐅𝐈𝐋𝐋 𝐇𝐄𝐑𝐄 𝐋𝐎𝐆 𝐆𝐑𝐎𝐔𝐏 𝐈𝐃 𝐖𝐇𝐄𝐑𝐄 𝐘𝐎𝐔𝐑 𝐁𝐎𝐓 𝐀𝐋𝐖𝐀𝐘𝐒 𝐒𝐓𝐀𝐘 𝐀𝐃𝐌𝐈𝐍 (𝐈𝐃 𝐌𝐔𝐒𝐓 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 𝐖𝐈𝐓𝐇 -100).",
+        "description": "ʏᴏᴜʀ ʟᴏɢ ɢʀᴏᴜᴘ ɪᴅ, ᴀᴅᴅ ʏᴏᴜʀ ʙᴏᴛ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇ ᴀs ᴀɴ ᴀᴅᴍɪɴ ᴡɪᴛʜ ғᴜʟʟ ʀɪɢʜᴛs!.",
         "value": "",
         "required": true
       }
