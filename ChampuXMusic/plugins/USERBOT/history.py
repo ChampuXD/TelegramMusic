@@ -20,15 +20,15 @@ async def sg(client: Client, message: Message):
         args = message.text.split()[1:]
         if not args:
             return await message.reply(
-                "Please provide a username, ID, or reply to a message."
+                "ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴜsᴇʀɴᴀᴍᴇ, ɪᴅ, ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ."
             )
         args = args[0]
-    lol = await message.reply("<code>Processing...</code>")
+    lol = await message.reply("<code>ᴘʀᴏᴄᴇssɪɴɢ...</code>")
     if args:
         try:
             user = await client.get_users(f"{args}")
         except Exception:
-            return await lol.edit("<code>Please specify a valid user!</code>")
+            return await lol.edit("<code>ᴘʟᴇᴀsᴇ sᴘᴇᴄɪғʏ ᴀ ᴠᴀʟɪᴅ ᴜsᴇʀ!</code>")
     sgbot = ["sangmata_bot", "sangmata_beta_bot"]
     sg = random.choice(sgbot)
     Champu = random.choice(assistants)
@@ -45,7 +45,7 @@ async def sg(client: Client, message: Message):
         if stalk.text is None:
             continue
         if not stalk:
-            await message.reply("botnya ngambek")
+            await message.reply("@TheChampu")
         elif stalk:
             await message.reply(f"{stalk.text}")
             break

@@ -6,7 +6,7 @@ from pyrogram.types import (
     Message,
 )
 
-from config import BANNED_USERS, OWNER_ID
+from config import BANNED_USERS, OWNER_ID, START_IMG_URL
 from ChampuXMusic import app
 from ChampuXMusic.misc import SUDOERS
 from ChampuXMusic.utils.database import add_sudo, remove_sudo
@@ -56,9 +56,6 @@ async def userdel(client, message: Message, _):
         await message.reply_text(_["sudo_8"])
 
 
-photo_url = "https://telegra.ph/file/20b4a9fd06ea4a9457a61.jpg"
-
-
 @app.on_message(
     filters.command(
         ["sudolist", "listsudo", "sudoers"],
@@ -72,7 +69,7 @@ async def sudoers_list(client, message: Message):
     ]
     reply_markups = InlineKeyboardMarkup(keyboard)
     await message.reply_photo(
-        photo=photo_url,
+        photo=START_IMG_URL,
         caption="**» ᴄʜᴇᴄᴋ sᴜᴅᴏ ʟɪsᴛ ʙʏ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ.**\n\n**» ɴᴏᴛᴇ:**  ᴏɴʟʏ sᴜᴅᴏ ᴜsᴇʀs ᴄᴀɴ ᴠɪᴇᴡ. ",
         reply_markup=reply_markups,
     )
@@ -83,7 +80,7 @@ async def check_sudo_list(client, callback_query: CallbackQuery):
     keyboard = []
     if callback_query.from_user.id not in SUDOERS:
         return await callback_query.answer(
-            "𝐍𝐢𝐤𝐚𝐥 𝐑𝐚𝐧𝐝𝐢 𝐁𝐚𝐥𝐚 𝐒𝐮𝐝𝐨𝐥𝐢𝐬𝐭 𝐃𝐞𝐤𝐡𝐧𝐞 𝐀𝐚𝐲𝐚 𝐇𝐚𝐢 𝐛𝐚𝐝𝐚🖕😎😂", show_alert=True
+            "sᴏʀʀʏ ᴏɴʟʏ ᴏᴡɴᴇʀ ᴀɴᴅ sᴜᴅᴏᴜsᴇʀs ᴄᴀɴ sʜᴏᴡ sᴜᴅᴏʟɪsᴛ ᴀsᴋ ʜɪᴍ ғᴏʀ sᴜᴅᴏʟɪsᴛ...", show_alert=True
         )
     else:
         user = await app.get_users(OWNER_ID)

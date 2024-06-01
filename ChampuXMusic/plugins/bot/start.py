@@ -35,9 +35,10 @@ SPAM_WINDOW_SECONDS = 5
 
 
 CHAMPU_PICS = [
-    "https://telegra.ph/file/3134ed3b57eb051b8c363.jpg",
-    "https://telegra.ph/file/5a2cbb9deb62ba4b122e4.jpg",
-    "https://telegra.ph/file/cb09d52a9555883eb0f61.jpg",
+    "https://graph.org/file/97a58a8b3934fe6151399.jpg",
+    "https://graph.org/file/d7224f80ca0c9eb1509fe.jpg",
+    "https://graph.org/file/b68bb51a3ba3e25b233f8.jpg",
+    "https://graph.org/file/7ae0b58a0856e58156b02.jpg",
 ]
 
 
