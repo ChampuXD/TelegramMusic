@@ -70,62 +70,14 @@ async def get_thumb(videoid):
                     await f.write(await resp.read())
                     await f.close()
 
-        # colors = ["white", "red", "orange", "yellow", "green", "cyan", "azure", "blue", "violet", "magenta", "pink"]
-        # border = random.choice(colors)
         youtube = Image.open(f"cache/thumb{videoid}.png")
         image1 = changeImageSize(1280, 720, youtube)
         bg_bright = ImageEnhance.Brightness(image1)
         bg_logo = bg_bright.enhance(1.1)
         bg_contra = ImageEnhance.Contrast(bg_logo)
         bg_logo = bg_contra.enhance(1.1)
-        # logox = ImageOps.expand(bg_logo, border=7, fill=f"{border}")
         background = changeImageSize(1280, 720, bg_logo)
-        # image2 = image1.convert("RGBA")
-        # background = image2.filter(filter=ImageFilter.BoxBlur(1))
-        # enhancer = ImageEnhance.Brightness(background)
-        # background = enhancer.enhance(0.9)
-        # draw = ImageDraw.Draw(background)
-        # arial = ImageFont.truetype("ChampuXMusic/assets/font2.ttf", 30)
-        # font = ImageFont.truetype("ChampuXMusic/assets/font.ttf", 30)
-        # draw.text((1110, 8), unidecode(app.name), fill="white", font=arial)
-        """
-        draw.text(
-            (1, 1),
-            f"{channel} | {views[:23]}",
-            (1, 1, 1),
-            font=arial,
-        )
-        draw.text(
-            (1, 1),
-            clear(title),
-            (1, 1, 1),
-            font=font,
-        )
-        draw.line(
-            [(1, 1), (1, 1)],
-            fill="white",
-            width=1,
-            joint="curve",
-        )
-        draw.ellipse(
-            [(1, 1), (2, 1)],
-            outline="white",
-            fill="white",
-            width=1,
-        )
-        draw.text(
-            (1, 1),
-            "00:00",
-            (1, 1, 1),
-            font=arial,
-        )
-        draw.text(
-            (1, 1),
-            f"{duration[:23]}",
-            (1, 1, 1),
-            font=arial,
-        )
-        """
+
         try:
             os.remove(f"cache/thumb{videoid}.png")
         except:

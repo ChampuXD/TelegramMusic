@@ -34,7 +34,7 @@ SPAM_THRESHOLD = 2
 SPAM_WINDOW_SECONDS = 5
 
 
-YUMI_PICS = [
+CHAMPU_PICS = [
     "https://telegra.ph/file/3134ed3b57eb051b8c363.jpg",
     "https://telegra.ph/file/5a2cbb9deb62ba4b122e4.jpg",
     "https://telegra.ph/file/cb09d52a9555883eb0f61.jpg",
@@ -264,7 +264,7 @@ async def welcome(client, message: Message):
                     )
 
                 await message.reply_photo(
-                    random.choice(YUMI_PICS),
+                    random.choice(CHAMPU_PICS),
                     caption=_["start_3"].format(
                         message.from_user.first_name,
                         app.mention,

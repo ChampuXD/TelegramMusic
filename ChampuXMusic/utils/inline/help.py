@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 def first_page(_):
     controll_button = [
         InlineKeyboardButton(text="๏ ᴍᴇɴᴜ ๏", callback_data=f"settingsback_helper"),
-        InlineKeyboardButton(text="๏ ɴᴇxᴛ ๏", callback_data=f"dilXaditi"),
+        InlineKeyboardButton(text="๏ ɴᴇxᴛ ๏", callback_data=f"fenu"),
     ]
     first_page_menu = InlineKeyboardMarkup(
         [
@@ -128,55 +128,55 @@ def help_pannel(_, START: Union[bool, int] = None):
         [
             [
                 InlineKeyboardButton(
-                    text="🍁αԃɱιɳ🍁",
+                    text="Aᴅᴍɪɴ",
                     callback_data="help_callback hb1",
                 ),
                 InlineKeyboardButton(
-                    text="🔺αυƭɦ🔺",
+                    text="Aᴜᴛʜ",
                     callback_data="help_callback hb2",
                 ),
                 InlineKeyboardButton(
-                    text="♨️вℓσ¢к♨️",
+                    text="Bʟᴏᴄᴋ",
                     callback_data="help_callback hb3",
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="📣ɠ¢αʂƭ📣",
+                    text="G-Cᴀsᴛ",
                     callback_data="help_callback hb4",
                 ),
                 InlineKeyboardButton(
-                    text="🚫ɠɓαɳ🚫",
+                    text="G-Bᴀɴ",
                     callback_data="help_callback hb12",
                 ),
                 InlineKeyboardButton(
-                    text="🍷ℓყɾเ¢ʂ🍷",
+                    text="Lʏʀɪᴄs",
                     callback_data="help_callback hb5",
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="🎙️քℓαყℓเʂƭ🎙️",
+                    text="Pʟᴀʏʟɪsᴛ",
                     callback_data="help_callback hb6",
                 ),
                 InlineKeyboardButton(
-                    text="🎸ѵσเ¢ε-¢ɦαƭ🎸",
+                    text="Vᴏɪᴄᴇ-ᴄʜᴀᴛ",
                     callback_data="help_callback hb10",
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="🕹️ρℓαყ🕹️",
+                    text="Pʟᴀʏ",
                     callback_data="help_callback hb8",
                 ),
                 InlineKeyboardButton(
-                    text="🍸ʂ𝖚∂σ🍸",
+                    text="Sᴜᴅᴏ",
                     callback_data="help_callback hb9",
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="⚜️SƬΛᏒƬ⚜️",
+                    text="Sᴛᴀʀᴛ",
                     callback_data="help_callback hb11",
                 ),
             ],
@@ -205,7 +205,7 @@ def private_help_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🎭 𝐇𝐄𝐋𝐏 🎭",
+                text="Hᴇʟᴘ",
                 callback_data="settings_back_helper",
             ),
         ],
