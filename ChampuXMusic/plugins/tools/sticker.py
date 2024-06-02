@@ -9,7 +9,7 @@ from ChampuXMusic import app
 import os
 
 
-API_ENDPOINT = "https://api.waifu.pics/upscale"
+API_ENDPOINT = "https://deepai.org/machine-learning-model/waifu2x"
 
 @app.on_message(filters.reply & filters.command(["upscale", "hd"]))
 async def upscale_image(client, message):
