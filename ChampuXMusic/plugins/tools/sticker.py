@@ -5,8 +5,10 @@ import httpx
 import pyrogram
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
 from ChampuXMusic import app
+import os
+
+DEEP_AI_API_KEY = '1f3b9c07-2afb-4c02-b5fd-82a82ec96426'  # Replace with your DeepAI API key
 
 @app.on_message(filters.reply & filters.command(["upscale", "hd"]))
 async def upscale_image(client, message):
@@ -21,32 +23,52 @@ async def upscale_image(client, message):
         with open(file_path, "rb") as image_file:
             f = image_file.read()
 
-        b = base64.b64encode(f).decode("utf-8")
+        # Prepare the image data for the request
+        files = {
+            'image': (file_path, f),
+        }
+        headers = {
+            'api-key': DEEP_AI_API_KEY
+        }
 
         async with httpx.AsyncClient() as http_client:
             response = await http_client.post(
-                "https://new.upscale.api/endpoint",  # Replace with the new API endpoint
-                json={"image_data": b},
+                "https://api.deepai.org/api/torch-srgan",  # DeepAI Image Super Resolution endpoint
+                headers=headers,
+                files=files,
                 timeout=None
             )
 
         if response.status_code == 200:
-            with open("upscaled_image.png", "wb") as output_file:
-                output_file.write(response.content)
-
-            await client.send_document(
-                message.chat.id,
-                document="upscaled_image.png",
-                caption="**ʜᴇʀᴇ ɪs ᴛʜᴇ ᴜᴘsᴄᴀʟᴇᴅ ɪᴍᴀɢᴇ!**",
-            )
+            response_data = response.json()
+            upscaled_image_url = response_data['output_url']
+            
+            async with http_client.stream('GET', upscaled_image_url) as res:
+                if res.status_code == 200:
+                    with open("upscaled_image.png", "wb") as output_file:
+                        async for chunk in res.aiter_bytes():
+                            output_file.write(chunk)
+                    await client.send_document(
+                        message.chat.id,
+                        document="upscaled_image.png",
+                        caption="**ʜᴇʀᴇ ɪs ᴛʜᴇ ᴜᴘsᴄᴀʟᴇᴅ ɪᴍᴀɢᴇ!**",
+                    )
+                    os.remove("upscaled_image.png")
+                else:
+                    await message.reply_text("**ғᴀɪʟᴇᴅ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴛʜᴇ ᴜᴘsᴄᴀʟᴇᴅ ɪᴍᴀɢᴇ.**")
         else:
-            await message.reply_text("**ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ.**")
+            await message.reply_text(f"**ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ. ᴇʀʀᴏʀ: {response.status_code} - {response.text}**")
 
     except Exception as e:
-        print(f"**ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ**: {e}")
+        print(f"ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ: {e}")
         await message.reply_text(
-            "**ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ.**"
+            f"**ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ. ᴇʀʀᴏʀ: {str(e)}. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ.**"
         )
+
+    finally:
+        if os.path.exists(file_path):
+            os.remove(file_path)
+
 
 ######### sticker id
 
