@@ -26,7 +26,7 @@ async def upscale_image(client, message):
 
         async with httpx.AsyncClient() as http_client:
             response = await http_client.post(
-                "https://api.qewertyy.me/upscale", data={"image_data": b}, timeout=None
+                "https://upscale.qewertyy.dev/", data={"image_data": b}, timeout=None
             )
 
         with open("upscaled_image.png", "wb") as output_file:
