@@ -1,15 +1,13 @@
 import base64
 from uuid import uuid4
-
 import httpx
 import pyrogram
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
 from ChampuXMusic import app
+from lexica import Client
 
-
-@app.on_message(filters.reply & filters.command(["upscale", "hd"]))
+@app.on_message(filters.command(["upscale", "hd"]))
 async def upscale_image(client, message):
     try:
         if not message.reply_to_message or not message.reply_to_message.photo:
@@ -22,15 +20,11 @@ async def upscale_image(client, message):
         with open(file_path, "rb") as image_file:
             f = image_file.read()
 
-        b = base64.b64encode(f).decode("utf-8")
-
-        async with httpx.AsyncClient() as http_client:
-            response = await http_client.post(
-                "https://upscale.qewertyy.dev/", data={"image_data": b}, timeout=None
-            )
+        client = Client()
+        imageBytes = client.upscale(f)
 
         with open("upscaled_image.png", "wb") as output_file:
-            output_file.write(response.content)
+            output_file.write(imageBytes)
 
         await client.send_document(
             message.chat.id,
@@ -43,7 +37,6 @@ async def upscale_image(client, message):
         await message.reply_text(
             "**ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ**."
         )
-
 
 ######### sticker id
 
