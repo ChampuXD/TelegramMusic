@@ -42,7 +42,7 @@ async def start(_, msg):
               InlineKeyboardButton("sᴛʀɪɴɢ", url=f"https://github.com/ChampuXD/ChampuXString"),
               ],
               [
-              InlineKeyboardButton("ᴍᴀɴᴀɢᴍᴇɴᴛ", url=f"https://github.com/ChampuXD/ChampuXManagment"),
+              InlineKeyboardButton("ᴍᴀɴᴀɢᴍᴇɴᴛ", url=f"https://github.com/ChampuXD/ChampuManagment"),
 InlineKeyboardButton("ᴄʜᴀᴛʙᴏᴛ", url=f"https://github.com/ChampuXD/ChatBot"),
 ]]
     
