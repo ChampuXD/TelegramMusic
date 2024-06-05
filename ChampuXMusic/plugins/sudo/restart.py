@@ -44,7 +44,7 @@ async def make_carbon(code):
 async def handle_refresh_logs(_, query: CallbackQuery):
     try:
         # Read the content of the log file
-        with open("log.txt", "r") as log_file:
+        with open("musiclog.txt", "r") as log_file:
             logs_content = log_file.read()
 
         # Create a new carbon image
@@ -70,7 +70,7 @@ async def handle_refresh_logs(_, query: CallbackQuery):
 async def log_(client, message, _):
     try:
         # Read the content of the log file
-        with open("log.txt", "r") as log_file:
+        with open("musiclog.txt", "r") as log_file:
             logs_content = log_file.read()
 
         # Create a carbon image
@@ -100,7 +100,7 @@ async def log_(client, message, _):
 @language
 async def log_(client, message, _):
     try:
-        await message.reply_document(document="log.txt")
+        await message.reply_document(document="musiclog.txt")
     except:
         await message.reply_text(_["server_1"])
 
