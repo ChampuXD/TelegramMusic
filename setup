@@ -82,7 +82,7 @@ installation(){
 }
 
 clear
-pprint "Welcome to Champu MUSIC Setup Installer\n\n"
+pprint "Welcome to Champu Music Setup Installer\n\n"
 pprint "If you see any error during Installation Process, Please refer to these files for logs: "
 pprint "\nFor node js errors , Checkout nodelog.txt"
 pprint "\nFor pypi packages errors , Checkout pypilog.txt"
@@ -94,7 +94,7 @@ update
 packages
 node
 installation
-pprint "\n\n\n\n\nDAXXMUSIC Installation Completed !" "cgreen"
+pprint "\n\n\n\n\nChampu Music Installation Completed !" "cgreen"
 sleep 1
 clear
 
