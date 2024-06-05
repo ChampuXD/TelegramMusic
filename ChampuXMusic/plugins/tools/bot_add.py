@@ -3,7 +3,7 @@ import random
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from config import LOGGER_ID as LOG_GROUP_ID
+from config import LOGGER_ID
 from ChampuXMusic import app
 from ChampuXMusic.utils.database import add_served_chat, get_assistant
 
@@ -37,7 +37,7 @@ async def join_watcher(_, message):
                     f"**🤔𝐀ᴅᴅᴇᴅ 𝐁ʏ:** {message.from_user.mention}"
                 )
                 await app.send_photo(
-                    LOG_GROUP_ID,
+                    LOGGER_ID,
                     photo=random.choice(photo),
                     caption=msg,
                     reply_markup=InlineKeyboardMarkup(

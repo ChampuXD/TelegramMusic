@@ -3,7 +3,7 @@ import random
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import LOGGER_ID as LOG_GROUP_ID
+from config import LOGGER_ID
 from ChampuXMusic import app
 from ChampuXMusic.utils.database import delete_served_chat, get_assistant
 
@@ -31,7 +31,7 @@ async def on_left_chat_member(_, message: Message):
             )
             chat_id = message.chat.id
             left = f"✫ <b><u>#𝐋ᴇғᴛ_𝐆ʀᴏᴜᴘ</u></b> ✫\n\n𝐂ʜᴀᴛ 𝐓ɪᴛʟᴇ : {title}\n\n𝐂ʜᴀᴛ 𝐈ᴅ : {chat_id}\n\n𝐑ᴇᴍᴏᴠᴇᴅ 𝐁ʏ : {remove_by}\n\n𝐁ᴏᴛ : @{app.username}"
-            await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=left)
+            await app.send_photo(LOGGER_ID, photo=random.choice(photo), caption=left)
             await delete_served_chat(chat_id)
             await userbot.leave_chat(chat_id)
     except Exception as e:
