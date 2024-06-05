@@ -14,7 +14,7 @@ random_photo = [
 ]
 
 bg_path = "ChampuXMusic/assets/userinfo.png"
-font_path = "ChampuXMusic/assets/hiroko.ttf"
+font_path = "ChampuXMusic/assets/champu.ttf"
 
 get_font = lambda font_size, font_path: ImageFont.truetype(font_path, font_size)
 

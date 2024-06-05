@@ -18,7 +18,7 @@
 [![Instagram](https://img.shields.io/badge/-Instagram-E1306C?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/Shivanshu_deo)
 [![Snapchat](https://img.shields.io/badge/-Snapchat-F5AD09?style=for-the-badge&logo=snapchat&logoColor=white)](https://www.snapchat.com/add/shivanshudeo?share_id=0SMI0ikB1E4&locale=en-IN)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](https://telegra.ph/%EA%9C%B1n%CE%B9%CE%BD%CE%B1i%D1%95n%CF%85-12-02)
-[![Youtube](https://img.shields.io/badge/-YouTube-F50909?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@shivanshudeo)
+[![Youtube](https://img.shields.io/badge/-YouTube-F50909?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@itsmechampu)
 
 
 
@@ -26,13 +26,13 @@
 <a href="https://www.youtube.com/@ShivanshuDeo"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>  
 </a></p>
 <p align="center">
-<a href="https://github.com/ChampuXD/ChampuXMusic"><img src="https://img.shields.io/github/stars/ChampuXD/ChampuXMusic?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
-<a href="https://github.com/ChampuXD/ChampuXMusic/network/members"> <img src="https://img.shields.io/github/forks/ChampuXD/ChampuXMusic?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
-<a href="https://github.com/ChampuXD/ChampuXMusic/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
+<a href="https://github.com/ChampuXD/ChampuMusic"><img src="https://img.shields.io/github/stars/ChampuXD/ChampuMusic?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
+<a href="https://github.com/ChampuXD/ChampuMusic/network/members"> <img src="https://img.shields.io/github/forks/ChampuXD/ChampuMusic?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
+<a href="https://github.com/ChampuXD/ChampuMusic/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
 <a href="https://www.python.org/"> <img src="https://img.shields.io/badge/Written%20in-Python-skyblue?style=for-the-badge&logo=python" alt="Python" /> </a>
 <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=white&label=telethon&logo=python&logoColor=blue&style=for-the-badge" /></a>
 <a href="https://pypi.org/project/Pyrogram/"> <img src="https://img.shields.io/pypi/v/pyrogram?color=white&label=pyrogram&logo=python&logoColor=blue&style=for-the-badge" /></a>
-<a href="https://github.com/ChampuXD/ChampuXMusic/commits/"> <img src="https://img.shields.io/github/last-commit/ChampuXD/ChampuXMusic?color=black&logo=github&logoColor=black&style=for-the-badge" /></a></p>
+<a href="https://github.com/ChampuXD/ChampuMusic/commits/"> <img src="https://img.shields.io/github/last-commit/ChampuXD/ChampuMusic?color=black&logo=github&logoColor=black&style=for-the-badge" /></a></p>
 <a href="https://www.youtube.com/@ShivanshuDeo"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>  
 <p align="center">
   <img src="https://github.com/TheChampu/ChampuMusic/blob/main/%F0%9F%96%A4%EA%9C%B1%E2%83%9F%D0%BD%CD%A5%CE%B9%CE%BD%CD%A3%CE%B1%CD%AB%D0%B8%D1%95%D0%BD%CF%85%F0%9F%96%A4.gif">

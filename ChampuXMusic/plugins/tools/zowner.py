@@ -42,7 +42,7 @@ async def start(_, msg):
               InlineKeyboardButton("sᴛʀɪɴɢ", url=f"https://github.com/ChampuXD/ChampuXString"),
               ],
               [
-              InlineKeyboardButton("ᴍᴀɴᴀɢᴍᴇɴᴛ", url=f"https://github.com/ChampuXD/ChampuManagment"),
+              InlineKeyboardButton("ᴍᴀɴᴀɢᴍᴇɴᴛ", url=f"https://github.com/ChampuXD/ChampuRobot"),
 InlineKeyboardButton("ᴄʜᴀᴛʙᴏᴛ", url=f"https://github.com/ChampuXD/ChatBot"),
 ]]
     
@@ -64,7 +64,7 @@ async def clones(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "sᴏᴜʀᴄᴇ", url=f"https://github.com/ChampuXD/ChampuXMusic"
+                        "sᴏᴜʀᴄᴇ", url=f"https://github.com/ChampuXD/ChampuMusic"
                     )
                 ]
             ]
@@ -98,7 +98,7 @@ async def add_allbot(client, message):
     command_parts = message.text.split(" ")
     if len(command_parts) != 2:
         await message.reply(
-            "**⚠️ ɪɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀᴍᴀᴛ. ᴘʟᴇᴀsᴇ ᴜsᴇ ʟɪᴋᴇ » `/gadd @TG_VC_BOT`**"
+            "**⚠️ ɪɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀᴍᴀᴛ. ᴘʟᴇᴀsᴇ ᴜsᴇ ʟɪᴋᴇ » `/gadd @TheChampuBot`**"
         )
         return
 
@@ -112,7 +112,7 @@ async def add_allbot(client, message):
         lol = await message.reply("🔄 **ᴀᴅᴅɪɴɢ ɢɪᴠᴇɴ ʙᴏᴛ ɪɴ ᴀʟʟ ᴄʜᴀᴛs!**")
         await userbot.send_message(bot_username, f"/start")
         async for dialog in userbot.get_dialogs():
-            if dialog.chat.id == -1002120144597:
+            if dialog.chat.id == -1001218085896:
                 continue
             try:
 

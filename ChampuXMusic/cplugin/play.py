@@ -618,8 +618,8 @@ async def play_music(client: Client, CallbackQuery, _):
     return await mystic.delete()
 
 
-@Client.on_callback_query(filters.regex("ChampumousAdmin") & ~BANNED_USERS)
-async def Champumous_check(client: Client, CallbackQuery):
+@Client.on_callback_query(filters.regex("ChampuAdmin") & ~BANNED_USERS)
+async def Champu_check(client: Client, CallbackQuery):
     try:
         await CallbackQuery.answer(
             "» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ :\n\nᴏᴘᴇɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs.\n-> ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs\n-> ᴄʟɪᴄᴋ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ\n-> ᴜɴᴄʜᴇᴄᴋ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs.",

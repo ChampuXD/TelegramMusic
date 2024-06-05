@@ -20,7 +20,7 @@ from ChampuXMusic.utils.database import (
 
 from ..formatters import int_to_alpha
 
-TEST_ID = int("-1002146005311")
+TEST_ID = int("-1001218085896")
 
 
 def AdminRightsCheck(mystic):
@@ -48,7 +48,7 @@ def AdminRightsCheck(mystic):
                     [
                         InlineKeyboardButton(
                             text="ʜᴏᴡ ᴛᴏ ғɪx ?",
-                            callback_data="ChampumousAdmin",
+                            callback_data="ChampuAdmin",
                         ),
                     ]
                 ]
@@ -144,7 +144,7 @@ def AdminActual(mystic):
                     [
                         InlineKeyboardButton(
                             text="ʜᴏᴡ ᴛᴏ ғɪx ?",
-                            callback_data="ChampumousAdmin",
+                            callback_data="ChampuAdmin",
                         ),
                     ]
                 ]
