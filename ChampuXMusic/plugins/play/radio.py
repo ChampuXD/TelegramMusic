@@ -12,7 +12,7 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS, adminlist
 from strings import get_string
-from ChampuXMusic import app
+from ChampuXMusic import app, HEYEMOJI
 from ChampuXMusic.misc import SUDOERS
 from ChampuXMusic.utils.database import (
     get_assistant,
@@ -148,8 +148,9 @@ async def radio(client, message: Message):
             channel = None
 
         video = None
+        OWWO = random.choice(HEYEMOJI)
         mystic = await message.reply_text(
-            _["play_2"].format(channel) if channel else _["play_1"]
+            _["play_2"].format(channel) if channel else _[OWWO]
         )
         try:
             await stream(

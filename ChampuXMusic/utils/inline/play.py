@@ -10,7 +10,7 @@ def track_markup(_, user_id, channel, fplay):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
+                text=_["S_B_1"],
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],
@@ -66,7 +66,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
+                text=_["S_B_1"],
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],
@@ -103,7 +103,7 @@ def stream_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
+                text=_["S_B_1"],
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],
@@ -161,7 +161,7 @@ def livestream_markup(_, videoid, user_id, mode, channel, fplay):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
+                text=_["S_B_1"],
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],
@@ -186,7 +186,7 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
+                text=_["S_B_1"],
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],
@@ -228,7 +228,7 @@ def telegram_markup(_, chat_id):
                 text="Next",
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
-            InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
+            InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close"),
         ],
     ]
     return buttons
@@ -242,7 +242,7 @@ def queue_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
+                text=_["S_B_1"],
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],
@@ -279,7 +279,7 @@ def stream_markup2(_, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
+                text=_["S_B_1"],
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],
@@ -291,7 +291,7 @@ def stream_markup2(_, chat_id):
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
         [
-            InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
+            InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close"),
         ],
     ]
     return buttons
@@ -334,7 +334,7 @@ def stream_markup_timer2(_, chat_id, played, dur):
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
         [
-            InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
+            InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close"),
         ],
     ]
     return buttons
@@ -344,7 +344,7 @@ def panel_markup_1(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
+                text=_["S_B_1"],
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],
@@ -383,7 +383,7 @@ def panel_markup_2(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
+                text=_["S_B_1"],
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],
@@ -425,7 +425,7 @@ def panel_markup_5(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
+                text=_["S_B_1"],
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],
@@ -556,7 +556,7 @@ def panel_markup_clone(_, vidid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
+                text=_["S_B_1"],
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],

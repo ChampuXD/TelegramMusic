@@ -12,7 +12,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtube_search import YoutubeSearch
 
 from config import BANNED_USERS, SERVER_PLAYLIST_LIMIT
-from ChampuXMusic import Carbon, app
+from ChampuXMusic import Carbon, app, HEYEMOJI
 from ChampuXMusic.utils.decorators.language import language, languageCB
 from ChampuXMusic.utils.inline.playlist import (
     botplaylist_markup,
@@ -220,7 +220,8 @@ async def play_playlist(client, CallbackQuery, _):
     except:
         pass
     video = True if mode == "v" else None
-    mystic = await CallbackQuery.message.reply_text(_["play_1"])
+    OWWO = random.choice(HEYEMOJI)
+    mystic = await CallbackQuery.message.reply_text(_[OWWO])
     for vidids in _playlist:
         result.append(vidids)
     try:
@@ -269,7 +270,8 @@ async def play_playlist_command(client, message, _):
 
     result = []
     video = True if mode == "v" else None
-    mystic = await message.reply_text(_["play_1"])
+    OWWO = random.choice(HEYEMOJI)
+    mystic = await message.reply_text(_[OWWO])
 
     for vidids in _playlist:
         result.append(vidids)

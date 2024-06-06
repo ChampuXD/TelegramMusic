@@ -1,4 +1,5 @@
 from typing import Union
+from ChampuXMusic import app
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
@@ -93,7 +94,7 @@ def queuemarkup(_, vidid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
+                text=_["S_B_1"],
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],
