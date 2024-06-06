@@ -51,10 +51,11 @@ RADIO_URL = getenv("RADIO_URL", "http://peridot.streamguys.com:7150/Mirchi")
 
 # MaximuM limit for fetching playlist's track from youtube, spotify, apple
 # links.
-PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "100"))
+PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", 100))
 # Set this to True if you want the assistant to automatically leave chats
 # after an interval
-AUTO_LEAVING_ASSISTANT = False
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "False")
+AUTO_LEAVE_ASSISTANT_TIME = int(getenv("ASSISTANT_LEAVE_TIME", 9000))
 
 # Get this credentials from https://developer.spotify.com/dashboard
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "19609edb1b9f4ed7be0c8c1342039362")
@@ -83,7 +84,7 @@ AUTO_SUGGESTION_TIME = int(
 AUTO_SUGGESTION_MODE = getenv("AUTO_SUGGESTION_MODE", "True")
 # Cleanmode time after which bot will delete its old messages from chats
 CLEANMODE_DELETE_MINS = int(
-    getenv("CLEANMODE_MINS", "5")
+    getenv("CLEANMODE_MINS", 5)
 )  # Remember to give value in Seconds
 
 # Get your pyrogram v2 session from @Champu_STRING_ROBOT on Telegram
