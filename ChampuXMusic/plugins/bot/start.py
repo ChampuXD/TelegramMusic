@@ -176,6 +176,7 @@ async def start_gp(client, message: Message, _):
         photo=config.START_IMG_URL,
         caption=_["start_1"].format(app.mention, BOT_UP),
         reply_markup=InlineKeyboardMarkup(out),
+        protect_content=True  # Add this line to disable forwarding
     )
     await add_served_chat(message.chat.id)
 
