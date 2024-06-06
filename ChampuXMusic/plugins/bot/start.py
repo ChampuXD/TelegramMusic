@@ -2,7 +2,7 @@ import asyncio
 import random
 import time
 from time import time
-from pyrogram.types import ChatPermissions
+
 from pyrogram import filters
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
@@ -41,90 +41,7 @@ CHAMPU_PICS = [
     "https://graph.org/file/7ae0b58a0856e58156b02.jpg",
 ]
 
-DISABLE_FORWARDING = ChatPermissions(
-    can_send_messages=True,
-    can_forward_messages=False,  # Disable forwarding
-    can_send_media_messages=True,
-    can_send_other_messages=True,
-    can_send_polls=True,
-    can_change_info=True,
-    can_add_web_page_previews=True,
-    can_pin_messages=True,
-    can_invite_users=True,
-)
 
-@app.on_message(filters.new_chat_members, group=-1)
-async def welcome(client, message: Message):
-    for member in message.new_chat_members:
-        try:
-            language = await get_lang(message.chat.id)
-            _ = get_string(language)
-            if await is_banned_user(member.id):
-                try:
-                    await message.chat.ban_member(member.id)
-                except Exception as e:
-                    print(e)
-            if member.id == app.id:
-                if message.chat.type != ChatType.SUPERGROUP:
-                    await message.reply_text(_["start_4"])
-                    await app.leave_chat(message.chat.id)
-                    return
-                if message.chat.id in await blacklisted_chats():
-                    await message.reply_text(
-                        _["start_5"].format(
-                            app.mention,
-                            f"https://t.me/{app.username}?start=sudolist",
-                            config.SUPPORT_CHAT,
-                        ),
-                        disable_web_page_preview=True,
-                    )
-                    await app.leave_chat(message.chat.id)
-                    return
-
-                out = start_panel(_)
-                chid = message.chat.id
-
-                try:
-                    userbot = await get_assistant(message.chat.id)
-
-                    chid = message.chat.id
-
-                    if message.chat.username:
-                        await userbot.join_chat(f"{message.chat.username}")
-                        await message.reply_text(
-                            f"**My [Assistant](tg://openmessage?user_id={userbot.id}) also entered the chat using the group's username.**"
-                        )
-                    else:
-                        invitelink = await app.export_chat_invite_link(chid)
-                        await asyncio.sleep(1)
-                        messages = await message.reply_text(
-                            f"**Joining my [Assistant](tg://openmessage?user_id={userbot.id}) using the invite link...**"
-                        )
-                        await userbot.join_chat(invitelink)
-                        await messages.delete()
-                        await message.reply_text(
-                            f"**My [Assistant](tg://openmessage?user_id={userbot.id}) also entered the chat using the invite link.**"
-                        )
-                except Exception as e:
-                    await message.edit_text(
-                        f"**Please make me admin to invite my [Assistant](tg://openmessage?user_id={userbot.id}) in this chat.**"
-                    )
-
-                await message.reply_photo(
-                    random.choice(CHAMPU_PICS),
-                    caption=_["start_3"].format(
-                        message.from_user.first_name,
-                        app.mention,
-                        message.chat.title,
-                        app.mention,
-                    ),
-                    reply_markup=InlineKeyboardMarkup(out),
-                )
-                await add_served_chat(message.chat.id)
-                await message.chat.set_permissions(DISABLE_FORWARDING)  # Disable forwarding
-                await message.stop_propagation()
-        except Exception as ex:
-            print(ex)
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
 async def start_pm(client, message: Message, _):
