@@ -119,4 +119,5 @@ async def start(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("✯ ᴄʟᴏsᴇ ✯", callback_data=f"close")]]
         ),
+        protect_content=True,
     )

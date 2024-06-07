@@ -56,15 +56,15 @@ async def check_ccbin(client, message):
             f"""
 <b>💠 ʙɪɴ ғᴜʟʟ ᴅᴇᴛᴀɪʟs:</b>
 
-<b>🏦 Bank:</b> <tt>{resp.bank}</tt>
-<b>💳 Bin:</b> <tt>{resp.bin}</tt>
-<b>🏡 Country:</b> <tt>{resp.country}</tt>
-<b>🇮🇳 Flag:</b> <tt>{resp.flag}</tt>
-<b>🧿 ISO:</b> <tt>{resp.iso}</tt>
-<b>⏳ Level:</b> <tt>{resp.level}</tt>
-<b>🔴 Prepaid:</b> <tt>{resp.prepaid}</tt>
-<b>🆔 Type:</b> <tt>{resp.type}</tt>
-<b>ℹ️ Vendor:</b> <tt>{resp.vendor}</tt>"""
+<b>🏦 ʙᴀɴᴋ:</b> <tt>{resp.bank}</tt>
+<b>💳 ʙɪɴ:</b> <tt>{resp.bin}</tt>
+<b>🏡 ᴄᴏᴜɴᴛʀʏ:</b> <tt>{resp.country}</tt>
+<b>🇮🇳 ғʟᴀɢ:</b> <tt>{resp.flag}</tt>
+<b>🧿 ɪsᴏ:</b> <tt>{resp.iso}</tt>
+<b>⏳ ʟᴇᴠᴇʟ:</b> <tt>{resp.level}</tt>
+<b>🔴 ᴘʀᴇᴘᴀɪᴅ:</b> <tt>{resp.prepaid}</tt>
+<b>🆔 ᴛʏᴘᴇ:</b> <tt>{resp.type}</tt>
+<b>ℹ️ ᴠᴇɴᴅᴏʀ:</b> <tt>{resp.vendor}</tt>"""
         )
     except:
         return await aux.edit(

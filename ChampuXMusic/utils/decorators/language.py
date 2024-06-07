@@ -11,6 +11,8 @@ def language(mystic):
                 return await message.reply_text(
                     text=f"{app.mention} ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ, ᴠɪsɪᴛ <a href={config.SUPPORT_CHAT}>sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ</a> ғᴏʀ ᴋɴᴏᴡɪɴɢ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
                     disable_web_page_preview=True,
+                    protect_content=True,
+                    
                 )
         try:
             await message.delete()

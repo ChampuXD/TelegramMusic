@@ -28,14 +28,14 @@ def extract_video_id(url):
 async def get_thumbnail_command(client, message):
     if len(message.command) < 2:
         return await message.reply_text(
-            "Please provide a YouTube video URL after the command to get thumbnail"
+            "ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏ ᴜʀʟ ᴀғᴛᴇʀ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇᴛ ᴛʜᴜᴍʙɴᴀɪʟ"
         )
     try:
         a = await message.reply_text("Processing...")
         url = message.text.split(" ")[1]
         video_id = extract_video_id(url)
         if not video_id:
-            await message.reply("Please provide a valid YouTube link.")
+            await message.reply("ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴠᴀʟɪᴅ ʏᴏᴜᴛᴜʙᴇ ʟɪɴᴋ.")
             return
         video_title = get_video_title(video_id)
         query = f"https://img.youtube.com/vi/{video_id}/maxresdefault.jpg"
@@ -45,7 +45,7 @@ async def get_thumbnail_command(client, message):
         await message.reply_photo(query, caption=caption)
         await a.delete()
     except requests.exceptions.RequestException:
-        await a.edit("An error occurred while fetching the YouTube video.")
+        await a.edit("ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ ᴡʜɪʟᴇ ғᴇᴛᴄʜɪɴɢ ᴛʜᴇ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏ.")
     except Exception as e:
-        await a.edit("An error occurred. Please try again later.")
-        print(f"Error: {e}")
+        await a.edit("ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ.")
+        print(f"ᴇʀʀᴏʀ: {e}")

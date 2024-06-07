@@ -33,6 +33,7 @@ def UserbotWrapper(command):
                 return await message.reply_text(
                     text=f"{app.mention} is under maintenance, visit [support chat]({SUPPORT_CHAT}) for knowing the reason.",
                     disable_web_page_preview=True,
+                    protect_content=True,
                 )
 
         try:
@@ -49,7 +50,8 @@ def UserbotWrapper(command):
                     get = await app.get_chat_member(chat_id, userbot.id)
                 except ChatAdminRequired:
                     return await message.reply_text(
-                        "➥ 𝗣𝐥𝐞𝐚𝐬𝐞  𝗠𝐚𝐤𝐞  𝗠𝐞  𝗔𝐝𝐦𝐢𝐧  𝗔𝐧𝐝  𝗠𝐮𝐬𝐭  𝗚𝐢𝐯𝐞  𝗜𝐧𝐯𝐢𝐭𝐞  𝗨𝐬𝐞𝐫𝐬  𝗣𝐨𝐰𝐞𝐫  𝗙𝐨𝐫  𝗜𝐧𝐯𝐢𝐭𝐞  𝗠𝐲 𝗔𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭  𝗜𝐧  𝗧𝐡𝐢𝐬  𝗖𝐡𝐚𝐭."
+                        "➥ ᴘʟᴇᴀsᴇ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴀɴᴅ ᴍᴜsᴛ ɢɪᴠᴇ ᴀʟʟ ᴘᴏᴡᴇʀ.",
+                        protect_content=True,
                     )
                 if (
                     get.status == ChatMemberStatus.BANNED
@@ -57,7 +59,8 @@ def UserbotWrapper(command):
                 ):
                     return await message.reply_text(
                         _["call_2"].format(
-                            app.mention, userbot.id, userbot.name, userbot.username
+                            app.mention, userbot.id, userbot.name, userbot.username,
+                            protect_content=True,
                         ),
                         reply_markup=InlineKeyboardMarkup(
                             [
@@ -86,11 +89,13 @@ def UserbotWrapper(command):
                             invitelink = await app.export_chat_invite_link(chat_id)
                         except ChatAdminRequired:
                             return await message.reply_text(
-                                "➥ ᴘʟᴇᴀsᴇ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴀɴᴅ ᴍᴜsᴛ ɢɪᴠᴇ ɪɴᴠɪᴛᴇ ᴜsᴇʀs ᴘᴏᴡᴇʀ ғᴏʀ ɪɴᴠɪᴛᴇ ᴍʏ ᴀssɪsᴛᴀɴᴛ ɪᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ."
+                                "➥ ᴘʟᴇᴀsᴇ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴀɴᴅ ᴍᴜsᴛ ɢɪᴠᴇ ɪɴᴠɪᴛᴇ ᴜsᴇʀs ᴘᴏᴡᴇʀ ғᴏʀ ɪɴᴠɪᴛᴇ ᴍʏ ᴀssɪsᴛᴀɴᴛ ɪᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ.",
+                                protect_content=True,
                             )
                         except Exception as e:
                             return await message.reply_text(
-                                f"{app.mention} ᴀssɪsᴛᴀɴᴛ sᴜᴄᴄᴇssғᴜʟʟʏ ᴊᴏɪɴᴇᴅ ✅\n\nɪᴅ:- {userbot.mention}.."
+                                f"{app.mention} ᴀssɪsᴛᴀɴᴛ sᴜᴄᴄᴇssғᴜʟʟʏ ᴊᴏɪɴᴇᴅ ✅\n\nɪᴅ:- {userbot.mention}..",
+                                protect_content=True,
                             )
 
                 if invitelink.startswith("https://t.me/+"):

@@ -39,6 +39,7 @@ async def langs_command(client, message: Message, _):
     await message.reply_text(
         _["lang_1"],
         reply_markup=keyboard,
+        protect_content=True,
     )
 
 
