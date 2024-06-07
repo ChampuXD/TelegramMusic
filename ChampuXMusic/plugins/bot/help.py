@@ -39,7 +39,7 @@ async def helper_private(
         _ = get_string(language)
         keyboard = first_page(_)
         await update.edit_message_text(
-            _["help_1"].format(SUPPORT_CHAT), reply_markup=keyboard
+            _["help_1"].format(SUPPORT_CHAT), reply_markup=keyboard, protect_content=True
         )
     else:
         try:
@@ -49,10 +49,11 @@ async def helper_private(
         language = await get_lang(update.chat.id)
         _ = get_string(language)
         keyboard = first_page(_)
-        await update.reply_photo(
+        await app.send_photo(
             photo=START_IMG_URL,
             caption=_["help_1"].format(SUPPORT_CHAT),
             reply_markup=keyboard,
+            protect_content=True
         )
 
 
@@ -71,7 +72,8 @@ async def help_com_group(client, message: Message, _):
         if user_command_count[user_id] > SPAM_THRESHOLD:
             # Block the user if they exceed the threshold
             hu = await message.reply_text(
-                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ**"
+                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ**",
+                protect_content=True
             )
             await asyncio.sleep(3)
             await hu.delete()
@@ -82,7 +84,7 @@ async def help_com_group(client, message: Message, _):
         user_last_message_time[user_id] = current_time
 
     keyboard = private_help_panel(_)
-    await message.reply_text(_["help_2"], reply_markup=InlineKeyboardMarkup(keyboard))
+    await message.reply_text(_["help_2"], reply_markup=InlineKeyboardMarkup(keyboard),protect_content=True)
 
 
 @app.on_callback_query(filters.regex("help_callback") & ~BANNED_USERS)
