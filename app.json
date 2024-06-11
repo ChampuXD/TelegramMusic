@@ -61,6 +61,16 @@
         "description": "ʏᴏᴜʀ ʟᴏɢ ɢʀᴏᴜᴘ ɪᴅ, ᴀᴅᴅ ʏᴏᴜʀ ʙᴏᴛ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇ ᴀs ᴀɴ ᴀᴅᴍɪɴ ᴡɪᴛʜ ғᴜʟʟ ʀɪɢʜᴛs!.",
         "value": "",
         "required": true
+      },
+      "SUPPORT_CHAT": {
+        "description": "ᴘᴜᴛ ʏᴏᴜʀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ ʟɪɴᴋ ʜᴇʀᴇ.",
+        "value": "",
+        "required": true
+      },
+      "SUPPORT_CHANNEL": {
+        "description": "ᴘᴜᴛ ʏᴏᴜʀ sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ ʜᴇʀᴇ.",
+        "value": "",
+        "required": true
       }
     },
     "buildpacks": [
