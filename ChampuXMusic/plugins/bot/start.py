@@ -9,9 +9,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython.__future__ import VideosSearch
 
 import config
-from config import BANNED_USERS, ChampuPic
+from config import BANNED_USERS
 from strings import get_string
-from ChampuXMusic import app
+from ChampuXMusic import app, ChampuPic
 from ChampuXMusic.plugins.sudo.sudoers import sudoers_list
 from ChampuXMusic.utils import bot_up_time
 from ChampuXMusic.utils.database import (

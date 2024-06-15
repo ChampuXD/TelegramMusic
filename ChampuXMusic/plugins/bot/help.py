@@ -5,9 +5,9 @@ import random
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from config import BANNED_USERS, SUPPORT_CHAT, ChampuPic
+from config import BANNED_USERS, SUPPORT_CHAT
 from strings import get_string, helpers
-from ChampuXMusic import app
+from ChampuXMusic import app, ChampuPic
 from ChampuXMusic.misc import SUDOERS
 from ChampuXMusic.utils import first_page, second_page
 from ChampuXMusic.utils.database import get_lang

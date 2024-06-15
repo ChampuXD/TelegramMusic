@@ -107,13 +107,6 @@ clean = {}
 autoclean = []
 
 #Random Image in Starting Bot / Owner (Telegram) :- @itsMeShivanshu
-ChampuPic  = ["START_IMG_URL",
-              "START_IMG_01",
-              "START_IMG_02",
-              "START_IMG_03",
-              "START_IMG_04",
-              "START_IMG_05"]
-
 START_IMG_01 = getenv(
     "START_IMG_URL", "https://graph.org/file/97a58a8b3934fe6151399.jpg"
 )
