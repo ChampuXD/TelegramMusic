@@ -1,5 +1,5 @@
 import random
-
+import config
 from pyrogram import Client, filters
 
 from ChampuXMusic import app
@@ -66,14 +66,10 @@ async def help(client: Client, message: Message):
         protect_content=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [
-                    InlineKeyboardButton(
-                        "✨𝚂𝚄𝙿𝙿𝙾𝚁𝚃✨", url=f"https://t.me/FenuZone"
-                    ),
-                    InlineKeyboardButton(
-                        "✨𝙾𝙵𝙵𝙸𝙲𝙴✨", url=f"https://t.me/TheChampu"
-                    ),
-                ]
+              [
+                   InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_CHAT),
+                   InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL),
+              ],
             ]
         ),
     )
@@ -86,14 +82,10 @@ async def help(client: Client, message: Message):
         protect_content=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [
-                    InlineKeyboardButton(
-                        "✨𝚂𝚄𝙿𝙿𝙾𝚁𝚃✨", url=f"https://t.me/FenuZone"
-                    ),
-                    InlineKeyboardButton(
-                        "✨𝙾𝙵𝙵𝙸𝙲𝙴✨", url=f"https://t.me/TheChampu"
-                    ),
-                ]
+              [
+                   InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_CHAT),
+                   InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL),
+              ],
             ]
         ),
     )

@@ -11,7 +11,7 @@ from youtubesearchpython.__future__ import VideosSearch
 import config
 from config import BANNED_USERS
 from strings import get_string
-from ChampuXMusic import app
+from ChampuXMusic import app, ChampuPic
 from ChampuXMusic.plugins.sudo.sudoers import sudoers_list
 from ChampuXMusic.utils import bot_up_time
 from ChampuXMusic.utils.database import (
@@ -33,13 +33,6 @@ user_command_count = {}
 SPAM_THRESHOLD = 2
 SPAM_WINDOW_SECONDS = 5
 
-
-CHAMPU_PICS = [
-    "https://graph.org/file/97a58a8b3934fe6151399.jpg",
-    "https://graph.org/file/d7224f80ca0c9eb1509fe.jpg",
-    "https://graph.org/file/b68bb51a3ba3e25b233f8.jpg",
-    "https://graph.org/file/7ae0b58a0856e58156b02.jpg",
-]
 
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
@@ -130,10 +123,11 @@ async def start_pm(client, message: Message, _):
                     text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</b>.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
                 )
     else:
+        OMFOO = random.choice(ChampuPic)
         out = private_panel(_)
         await app.send_photo(
         chat_id=message.chat.id,
-        photo=config.START_IMG_URL,
+        photo=OMFOO,
         caption=_["start_2"].format(message.from_user.mention, app.mention),
         reply_markup=InlineKeyboardMarkup(out),
         protect_content=True  # Add this line to disable forwarding
@@ -173,9 +167,10 @@ async def start_gp(client, message: Message, _):
 
     out = start_panel(_)
     BOT_UP = await bot_up_time()
+    OMFOO = random.choice(ChampuPic)
     await app.send_photo(
         chat_id=message.chat.id,
-        photo=config.START_IMG_URL,
+        photo = OMFOO,
         caption=_["start_1"].format(app.mention, BOT_UP),
         reply_markup=InlineKeyboardMarkup(out),
         protect_content=True  # Add this line to disable forwarding
@@ -269,7 +264,7 @@ async def welcome(client, message: Message):
                     )
 
                 await message.reply_photo(
-                    random.choice(CHAMPU_PICS),
+                    random.choice(ChampuPic),
                     caption=_["start_3"].format(
                         message.from_user.first_name,
                         app.mention,

@@ -26,6 +26,12 @@ HEYEMOJI = ["PPLAY_1",
             "PPLAY_16",
             "PPLAY_17"]
 
+ChampuPic  = ["START_IMG_URL",
+              "START_IMG_01",
+              "START_IMG_02",
+              "START_IMG_03",
+              "START_IMG_04",
+              "START_IMG_05"]
 
 dirr()
 git()
