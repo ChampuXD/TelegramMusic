@@ -1,5 +1,6 @@
 from SafoneAPI import SafoneAPI
 import config
+import random
 from ChampuXMusic.core.bot import Champu
 from ChampuXMusic.core.dir import dirr
 from ChampuXMusic.core.git import git
@@ -32,7 +33,7 @@ ChampuPic  = [config.START_IMG_URL,
               config.START_IMG_03,
               config.START_IMG_04,
               config.START_IMG_05]
-
+OMFOO = random.choice(ChampuPic)
 
 dirr()
 git()

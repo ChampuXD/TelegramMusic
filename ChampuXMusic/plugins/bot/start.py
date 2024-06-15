@@ -1,5 +1,4 @@
 import asyncio
-import random
 import time
 from time import time
 
@@ -11,7 +10,7 @@ from youtubesearchpython.__future__ import VideosSearch
 import config
 from config import BANNED_USERS
 from strings import get_string
-from ChampuXMusic import app, ChampuPic
+from ChampuXMusic import app, OMFOO
 from ChampuXMusic.plugins.sudo.sudoers import sudoers_list
 from ChampuXMusic.utils import bot_up_time
 from ChampuXMusic.utils.database import (
@@ -126,7 +125,7 @@ async def start_pm(client, message: Message, _):
         out = private_panel(_)
         await app.send_photo(
         chat_id=message.chat.id,
-        photo=random.choice(ChampuPic),
+        photo=OMFOO,
         caption=_["start_2"].format(message.from_user.mention, app.mention),
         reply_markup=InlineKeyboardMarkup(out),
         protect_content=True  # Add this line to disable forwarding
@@ -168,7 +167,7 @@ async def start_gp(client, message: Message, _):
     BOT_UP = await bot_up_time()
     await app.send_photo(
         chat_id=message.chat.id,
-        photo=random.choice(ChampuPic),
+        photo=OMFOO,
         caption=_["start_1"].format(app.mention, BOT_UP),
         reply_markup=InlineKeyboardMarkup(out),
         protect_content=True  # Add this line to disable forwarding
@@ -262,7 +261,7 @@ async def welcome(client, message: Message):
                     )
 
                 await message.reply_photo(
-                    random.choice(ChampuPic),
+                    OMFOO,
                     caption=_["start_3"].format(
                         message.from_user.first_name,
                         app.mention,
