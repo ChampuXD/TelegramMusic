@@ -9,9 +9,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython.__future__ import VideosSearch
 
 import config
-from config import BANNED_USERS
+from config import BANNED_USERS, ChampuPic
 from strings import get_string
-from ChampuXMusic import app, ChampuPic
+from ChampuXMusic import app
 from ChampuXMusic.plugins.sudo.sudoers import sudoers_list
 from ChampuXMusic.utils import bot_up_time
 from ChampuXMusic.utils.database import (
@@ -123,11 +123,10 @@ async def start_pm(client, message: Message, _):
                     text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</b>.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
                 )
     else:
-        OMFOO = random.choice(ChampuPic)
         out = private_panel(_)
         await app.send_photo(
         chat_id=message.chat.id,
-        photo=OMFOO,
+        photo=random.choice(ChampuPic),
         caption=_["start_2"].format(message.from_user.mention, app.mention),
         reply_markup=InlineKeyboardMarkup(out),
         protect_content=True  # Add this line to disable forwarding
@@ -167,10 +166,9 @@ async def start_gp(client, message: Message, _):
 
     out = start_panel(_)
     BOT_UP = await bot_up_time()
-    OMFOO = random.choice(ChampuPic)
     await app.send_photo(
         chat_id=message.chat.id,
-        photo = OMFOO,
+        photo=random.choice(ChampuPic),
         caption=_["start_1"].format(app.mention, BOT_UP),
         reply_markup=InlineKeyboardMarkup(out),
         protect_content=True  # Add this line to disable forwarding

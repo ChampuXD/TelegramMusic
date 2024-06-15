@@ -5,9 +5,9 @@ import random
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from config import BANNED_USERS, SUPPORT_CHAT
+from config import BANNED_USERS, SUPPORT_CHAT, ChampuPic
 from strings import get_string, helpers
-from ChampuXMusic import app, ChampuPic
+from ChampuXMusic import app
 from ChampuXMusic.misc import SUDOERS
 from ChampuXMusic.utils import first_page, second_page
 from ChampuXMusic.utils.database import get_lang
@@ -49,10 +49,9 @@ async def helper_private(
         language = await get_lang(update.chat.id)
         _ = get_string(language)
         keyboard = first_page(_)
-        OMFOO = random.choice(ChampuPic)
         await app.send_photo(
             chat_id=update.chat.id,  # Add this argument
-            photo=OMFOO,
+            photo=random.choice(ChampuPic),
             caption=_["help_1"].format(SUPPORT_CHAT),
             reply_markup=keyboard,
             protect_content=True
