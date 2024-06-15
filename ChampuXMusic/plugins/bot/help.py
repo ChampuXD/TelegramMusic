@@ -1,12 +1,13 @@
 import asyncio
 from time import time
 from typing import Union
+
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from config import BANNED_USERS, SUPPORT_CHAT
+from config import BANNED_USERS, START_IMG_URL, SUPPORT_CHAT
 from strings import get_string, helpers
-from ChampuXMusic import app, OMFOO
+from ChampuXMusic import app
 from ChampuXMusic.misc import SUDOERS
 from ChampuXMusic.utils import first_page, second_page
 from ChampuXMusic.utils.database import get_lang
@@ -49,8 +50,7 @@ async def helper_private(
         _ = get_string(language)
         keyboard = first_page(_)
         await app.send_photo(
-            chat_id=update.chat.id,  # Add this argument
-            photo=OMFOO,
+            photo=START_IMG_URL,
             caption=_["help_1"].format(SUPPORT_CHAT),
             reply_markup=keyboard,
             protect_content=True

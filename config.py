@@ -106,25 +106,6 @@ clean = {}
 
 autoclean = []
 
-#Random Image in Starting Bot / Owner (Telegram) :- @itsMeShivanshu
-START_IMG_01 = getenv(
-    "START_IMG_URL", "https://graph.org/file/97a58a8b3934fe6151399.jpg"
-)
-START_IMG_02 = getenv(
-    "START_IMG_URL", "https://graph.org/file/d7224f80ca0c9eb1509fe.jpg"
-)
-START_IMG_03 = getenv(
-    "START_IMG_URL", "https://graph.org/file/b68bb51a3ba3e25b233f8.jpg"
-)
-START_IMG_04 = getenv(
-    "START_IMG_URL", "https://graph.org/file/7ae0b58a0856e58156b02.jpg"
-)
-START_IMG_05 = getenv(
-    "START_IMG_URL", "https://graph.org/file/d7224f80ca0c9eb1509fe.jpg"
-)
-START_IMG_05 = getenv(
-    "START_IMG_URL", "https://graph.org/file/7ae0b58a0856e58156b02.jpg"
-)
 
 START_IMG_URL = getenv(
     "START_IMG_URL", "https://telegra.ph/file/55ea468498cfb7881c28b.jpg"

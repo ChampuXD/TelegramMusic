@@ -27,14 +27,6 @@ HEYEMOJI = ["PPLAY_1",
             "PPLAY_16",
             "PPLAY_17"]
 
-ChampuPic  = [config.START_IMG_URL,
-              config.START_IMG_01,
-              config.START_IMG_02,
-              config.START_IMG_03,
-              config.START_IMG_04,
-              config.START_IMG_05]
-OMFOO = random.choice(ChampuPic)
-
 dirr()
 git()
 dbb()

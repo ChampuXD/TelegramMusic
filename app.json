@@ -57,26 +57,6 @@
         "value": "",
         "required": true
       },
-      "START_IMG_01": {
-        "description": "ғɪʟʟ ʜᴇʀᴇ ʏᴏᴜʀ 2ɴᴅ sᴛᴀʀᴛ ɪᴍᴀɢᴇ ᴜʀʟ, ɢᴇᴛ ɪᴛ ғʀᴏᴍ @TheChampuBot ᴜsɪɴɢ /tgm ᴄᴏᴍᴍᴀɴᴅ",
-        "value": "",
-        "required": false
-      },
-      "START_IMG_02": {
-        "description": "ғɪʟʟ ʜᴇʀᴇ ʏᴏᴜʀ 3ʀᴅ sᴛᴀʀᴛ ɪᴍᴀɢᴇ ᴜʀʟ, ɢᴇᴛ ɪᴛ ғʀᴏᴍ @TheChampuBot ᴜsɪɴɢ /tgm ᴄᴏᴍᴍᴀɴᴅ",
-        "value": "",
-        "required": false
-      },
-      "START_IMG_03": {
-        "description": "ғɪʟʟ ʜᴇʀᴇ ʏᴏᴜʀ 4ᴛʜ sᴛᴀʀᴛ ɪᴍᴀɢᴇ ᴜʀʟ, ɢᴇᴛ ɪᴛ ғʀᴏᴍ @TheChampuBot ᴜsɪɴɢ /tgm ᴄᴏᴍᴍᴀɴᴅ",
-        "value": "",
-        "required": false
-      },
-      "START_IMG_04": {
-        "description": "ғɪʟʟ ʜᴇʀᴇ ʏᴏᴜʀ 5ᴛʜ sᴛᴀʀᴛ ɪᴍᴀɢᴇ ᴜʀʟ, ɢᴇᴛ ɪᴛ ғʀᴏᴍ @TheChampuBot ᴜsɪɴɢ /tgm ᴄᴏᴍᴍᴀɴᴅ",
-        "value": "",
-        "required": false
-      },
       "START_IMG_05": {
         "description": "ғɪʟʟ ʜᴇʀᴇ ʏᴏᴜʀ 6ᴛʜ sᴛᴀʀᴛ ɪᴍᴀɢᴇ ᴜʀʟ, ɢᴇᴛ ɪᴛ ғʀᴏᴍ @TheChampuBot ᴜsɪɴɢ /tgm ᴄᴏᴍᴍᴀɴᴅ",
         "value": "",
