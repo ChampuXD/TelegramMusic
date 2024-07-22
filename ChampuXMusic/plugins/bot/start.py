@@ -131,12 +131,10 @@ async def start_pm(client, message: Message, _):
                 )
     else:
         out = private_panel(_)
-        await app.send_photo(
-        chat_id=message.chat.id,
-        photo=config.START_IMG_URL,
-        caption=_["start_2"].format(message.from_user.mention, app.mention),
-        reply_markup=InlineKeyboardMarkup(out),
-        protect_content=True  # Add this line to disable forwarding
+        await message.reply_photo(
+            photo=config.START_IMG_URL,
+            caption=_["start_2"].format(message.from_user.mention, app.mention),
+            reply_markup=InlineKeyboardMarkup(out),
         )
         if await is_on_off(2):
             return await app.send_message(
@@ -173,12 +171,10 @@ async def start_gp(client, message: Message, _):
 
     out = start_panel(_)
     BOT_UP = await bot_up_time()
-    await app.send_photo(
-        chat_id=message.chat.id,
+    await message.reply_photo(
         photo=config.START_IMG_URL,
         caption=_["start_1"].format(app.mention, BOT_UP),
         reply_markup=InlineKeyboardMarkup(out),
-        protect_content=True  # Add this line to disable forwarding
     )
     await add_served_chat(message.chat.id)
 
@@ -211,7 +207,7 @@ async def start_gp(client, message: Message, _):
             )
 
 
-@app.on_message(filters.new_chat_members, group=-1)
+@app.on_message(filters.new_chat_members, group=-6)
 async def welcome(client, message: Message):
     for member in message.new_chat_members:
         try:

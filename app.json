@@ -57,11 +57,6 @@
         "value": "",
         "required": true
       },
-      "START_IMG_05": {
-        "description": "ғɪʟʟ ʜᴇʀᴇ ʏᴏᴜʀ 6ᴛʜ sᴛᴀʀᴛ ɪᴍᴀɢᴇ ᴜʀʟ, ɢᴇᴛ ɪᴛ ғʀᴏᴍ @TheChampuBot ᴜsɪɴɢ /tgm ᴄᴏᴍᴍᴀɴᴅ",
-        "value": "",
-        "required": false
-      },
       "LOGGER_ID": {
         "description": "ʏᴏᴜʀ ʟᴏɢ ɢʀᴏᴜᴘ ɪᴅ, ᴀᴅᴅ ʏᴏᴜʀ ʙᴏᴛ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇ ᴀs ᴀɴ ᴀᴅᴍɪɴ ᴡɪᴛʜ ғᴜʟʟ ʀɪɢʜᴛs!.",
         "value": "",
