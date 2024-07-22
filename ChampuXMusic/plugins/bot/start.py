@@ -25,7 +25,9 @@ from ChampuXMusic.utils.database import (
 )
 from ChampuXMusic.utils.decorators.language import LanguageStart
 from ChampuXMusic.utils.inline import first_page, private_panel, start_panel
+import urllib.parse
 
+url = f"https://t.me/{urllib.parse.quote(app.username)}?start=sudolist"
 # Define a dictionary to track the last message timestamp for each user
 user_last_message_time = {}
 user_command_count = {}
@@ -141,6 +143,7 @@ async def start_pm(client, message: Message, _):
                 chat_id=config.LOGGER_ID,
                 text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
             )
+        
 
 
 @app.on_message(filters.command(["start"]) & filters.group & ~BANNED_USERS)
@@ -224,9 +227,11 @@ async def welcome(client, message: Message):
                     await app.leave_chat(message.chat.id)
                     return
                 if message.chat.id in await blacklisted_chats():
+                    url = f"https://t.me/{urllib.parse.quote(app.username)}?start=sudolist"
                     await message.reply_text(
                         _["start_5"].format(
                             app.mention,
+                            url,
                             f"https://t.me/{app.username}?start=sudolist",
                             config.SUPPORT_CHAT,
                         ),
