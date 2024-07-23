@@ -5,6 +5,8 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+RUN python -m pip install --upgrade yt-dlp
+
 COPY . /app/
 WORKDIR /app/
 RUN python -m pip install --no-cache-dir --upgrade pip
