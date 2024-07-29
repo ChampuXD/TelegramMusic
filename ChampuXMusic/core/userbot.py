@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 from pyrogram import Client
 
 load_dotenv()
-from dotenv import load_dotenv
 
 import config
 from strings.__init__ import LOGGERS

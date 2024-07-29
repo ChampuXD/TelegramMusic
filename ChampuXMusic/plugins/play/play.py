@@ -10,7 +10,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS, lyrical
-from ChampuXMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from ChampuXMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app, EMOJIS
 from ChampuXMusic.core.call import Champu
 from ChampuXMusic.utils import seconds_to_min, time_to_seconds
 from ChampuXMusic.utils.channelplay import get_channeplayCB
@@ -90,8 +90,9 @@ async def play_commnd(
         user_last_message_time[user_id] = current_time
 
     await add_served_chat(message.chat.id)
+    Emoji = random.choice(EMOJIS)
     mystic = await message.reply_text(
-        _["play_2"].format(channel) if channel else _["play_1"]
+        _["play_2"].format(channel) if channel else _[Emoji]
     )
     plist_id = None
     slider = None
@@ -557,8 +558,9 @@ async def play_music(client, CallbackQuery, _):
         await CallbackQuery.answer()
     except:
         pass
+    Emoji = random.choice(EMOJIS)
     mystic = await CallbackQuery.message.reply_text(
-        _["play_2"].format(channel) if channel else _["play_1"]
+        _["play_2"].format(channel) if channel else _[Emoji]
     )
     try:
         details, track_id = await YouTube.track(vidid, True)
@@ -646,8 +648,9 @@ async def play_playlists_command(client, CallbackQuery, _):
         await CallbackQuery.answer()
     except:
         pass
+    Emoji = random.choice(EMOJIS)
     mystic = await CallbackQuery.message.reply_text(
-        _["play_2"].format(channel) if channel else _["play_1"]
+        _["play_2"].format(channel) if channel else _[Emoji]
     )
     videoid = lyrical.get(videoid)
     video = True if mode == "v" else None
