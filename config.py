@@ -18,29 +18,21 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 16000))
 
-# Chat id of a group for logging bot's activities
-
-
 EXTRA_PLUGINS = getenv(
     "EXTRA_PLUGINS",
     "True",
 )
 
 # Fill True if you want to load extra plugins
-
-
 EXTRA_PLUGINS_REPO = getenv(
     "EXTRA_PLUGINS_REPO",
     "https://github.com/TheChampu/MusicPlugins",
 )
 # Fill here the external plugins repo where plugins that you want to load
-
-
+# Your folder name in your extra plugins repo where all plugins stored
 EXTRA_PLUGINS_FOLDER = getenv("EXTRA_PLUGINS_FOLDER", "plugins")
 
-# Your folder name in your extra plugins repo where all plugins stored
-
-
+# Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("LOGGER_ID"))
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001699199963"))
 
@@ -70,9 +62,8 @@ SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/akaChampu")
 # Maximum Limit Allowed for users to save playlists on bot's server
 SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "100"))
 
-RADIO_URL = getenv("RADIO_URL", "http://peridot.streamguys.com:7150/Mirchi")
-
 # Don't fill here any YouTube link fill here any direct acessable audio link
+RADIO_URL = getenv("RADIO_URL", "http://peridot.streamguys.com:7150/Mirchi")
 
 # MaximuM limit for fetching playlist's track from youtube, spotify, apple links.
 PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "100"))
