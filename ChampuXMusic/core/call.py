@@ -13,7 +13,7 @@ from pytgcalls.types.stream import StreamAudioEnded
 
 import config
 from strings import get_string
-from ChampuXMusic import LOGGER, YouTube, app
+from ChampuXMusic import LOGGER, YouTube, app, YTB
 from ChampuXMusic.misc import db
 from ChampuXMusic.utils.database import (
     add_active_chat,
