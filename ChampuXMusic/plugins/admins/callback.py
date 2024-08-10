@@ -15,7 +15,7 @@ from config import (
     votemode,
 )
 from strings import get_string
-from ChampuXMusic import YouTube, app
+from ChampuXMusic import YouTube, app, YTB
 from ChampuXMusic.core.call import Champu
 from ChampuXMusic.misc import SUDOERS, db
 from ChampuXMusic.utils.database import (
@@ -443,7 +443,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 _["call_7"], disable_web_page_preview=True
             )
             try:
-                file_path, direct = await YouTube.download(
+                file_path, direct = await YTB.download(
                     videoid,
                     mystic,
                     videoid=True,

@@ -10,7 +10,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS, lyrical
-from ChampuXMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app, EMOJIS
+from ChampuXMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app, EMOJIS, YTB
 from ChampuXMusic.core.call import Champu
 from ChampuXMusic.utils import seconds_to_min, time_to_seconds
 from ChampuXMusic.utils.channelplay import get_channeplayCB
@@ -832,7 +832,7 @@ async def stream(
                     db[chat_id] = []
                 status = True if video else None
                 try:
-                    file_path, direct = await YouTube.download(
+                    file_path, direct = await YTB.download(
                         vidid, mystic, video=status, videoid=True
                     )
                 except:
@@ -898,7 +898,7 @@ async def stream(
         thumbnail = result["thumb"]
         status = True if video else None
         try:
-            file_path, direct = await YouTube.download(
+            file_path, direct = await YTB.download(
                 vidid, mystic, videoid=True, video=status
             )
         except:

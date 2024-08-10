@@ -427,7 +427,7 @@ class Call(PyTgCalls):
             elif "vid_" in queued:
                 mystic = await app.send_message(original_chat_id, _["call_7"])
                 try:
-                    file_path, direct = await YouTube.download(
+                    file_path, direct = await YTB.download(
                         videoid,
                         mystic,
                         videoid=True,
