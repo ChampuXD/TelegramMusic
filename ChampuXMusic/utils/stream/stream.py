@@ -5,7 +5,7 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
-from ChampuXMusic import YouTube, app, YTB
+from ChampuXMusic import YouTube, app
 from ChampuXMusic.core.call import Champu
 
 # Define a dictionary to track the last message timestamp for each user
@@ -88,7 +88,7 @@ async def stream(
                     db[chat_id] = []
                 status = True if video else None
                 try:
-                    file_path, direct = await YTB.download(
+                    file_path, direct = await YouTube.download(
                         vidid, mystic, video=status, videoid=True
                     )
                 except:
@@ -154,7 +154,7 @@ async def stream(
         thumbnail = result["thumb"]
         status = True if video else None
         try:
-            file_path, direct = await YTB.download(
+            file_path, direct = await YouTube.download(
                 vidid, mystic, videoid=True, video=status
             )
         except:

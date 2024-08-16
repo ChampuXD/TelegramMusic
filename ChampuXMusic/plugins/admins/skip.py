@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
 from config import BANNED_USERS
-from ChampuXMusic import YouTube, app, YTB
+from ChampuXMusic import YouTube, app
 from ChampuXMusic.core.call import Champu
 from ChampuXMusic.misc import db
 from ChampuXMusic.utils.database import get_loop
@@ -136,7 +136,7 @@ async def skip(cli, message: Message, _, chat_id):
     elif "vid_" in queued:
         mystic = await message.reply_text(_["call_7"], disable_web_page_preview=True)
         try:
-            file_path, direct = await YTB.download(
+            file_path, direct = await YouTube.download(
                 videoid,
                 mystic,
                 videoid=True,

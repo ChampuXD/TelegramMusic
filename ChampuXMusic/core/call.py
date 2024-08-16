@@ -13,7 +13,7 @@ from pytgcalls.types.stream import StreamAudioEnded
 
 import config
 from strings import get_string
-from ChampuXMusic import LOGGER, YouTube, app, YTB
+from ChampuXMusic import LOGGER, YouTube, app
 from ChampuXMusic.misc import db
 from ChampuXMusic.utils.database import (
     add_active_chat,
@@ -427,7 +427,7 @@ class Call(PyTgCalls):
             elif "vid_" in queued:
                 mystic = await app.send_message(original_chat_id, _["call_7"])
                 try:
-                    file_path, direct = await YTB.download(
+                    file_path, direct = await YouTube.download(
                         videoid,
                         mystic,
                         videoid=True,
