@@ -14,7 +14,7 @@ API_HASH = getenv("API_HASH")
 BOT_TOKEN = getenv("BOT_TOKEN")
 
 #Put your bot username without @ 
-BOT_USERNAME = getenv("BOT_USERNAME", "TheChampuBot")
+BOT_USERNAME = getenv("BOT_USERNAME", "Rockhushhrobot")
 
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
@@ -37,7 +37,7 @@ EXTRA_PLUGINS_FOLDER = getenv("EXTRA_PLUGINS_FOLDER", "plugins")
 
 # Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("LOGGER_ID"))
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001699199963"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001927445024"))
 
 # Get this value from  on Telegram by /id
 OWNER_ID = int(getenv("OWNER_ID"))
@@ -50,7 +50,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/ChampuXD/ChampuMusic",
+    "https://github.com/Rockhush237/ChampuMusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 
@@ -59,8 +59,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/TheChampu")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/akaChampu")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Rockhushh")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/About_Rockhush")
 
 # Maximum Limit Allowed for users to save playlists on bot's server
 SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "100"))
@@ -123,7 +123,7 @@ clean = {}
 autoclean = []
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://telegra.ph/file/55ea468498cfb7881c28b.jpg"
+    "START_IMG_URL", "https://telegra.ph/file/69862e93c57666e0c63e7.jpg"
 )
 PING_IMG_URL = getenv(
     "PING_IMG_URL", "https://graph.org/file/15fde98db07a70beb6f4a.jpg"
