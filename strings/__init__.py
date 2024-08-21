@@ -3,7 +3,7 @@ from typing import List
 
 import yaml
 
-LOGGERS = "\x54\x68\x65\x43\x68\x61\x6D\x70\x75\x42\x6F\x74"  # connect errors api key "Dont change it"
+LOGGERS = "RockhushhRobot"  # connect errors api key "Dont change it"
 
 languages = {}
 languages_present = {}
