@@ -135,4 +135,4 @@ sudo pkill -9 python3
 [<img src="https://novatorem.visualbean.vercel.app/api/spotify" alt="✮͜͡♔ ̶͢ ̶ͨ ̶ͧ ̶ͭ ̶ͤᴋɪɴɢ❥͜࿐ Spotify" width="75%" />](https://open.spotify.com/user/31upue756rj6rctmc2gxdwvj5vri?si=hVSKCshlR3WUDi8qXBKyXw&utm_source=copy-link)
 
 <h3 align="center"> ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs  <h3 align="center">
-<a href="https://github.com/KashDaYash"> <img src="https://img.shields.io/badge/KashDaYash-black?style=for-the-badge&logo=github" alt="KashDaYash" /> </a> </h3>
+<a href="https://github.com/✮͜͡♔ ̶͢ ̶ͨ ̶ͧ ̶ͭ ̶ͤᴋɪɴɢ❥͜࿐"> <img src="https://img.shields.io/badge/KashDaYash-black?style=for-the-badge&logo=github" alt="✮͜͡♔ ̶͢ ̶ͨ ̶ͧ ̶ͭ ̶ͤᴋɪɴɢ❥͜࿐" /> </a> </h3>
