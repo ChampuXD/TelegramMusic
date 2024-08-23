@@ -1,12 +1,12 @@
 {
-  "name": "ᴄʜᴧᴍᴘᴜ ꭙ ᴍᴜsɪᴄ",
+  "name": "˹ʀᴏᴄᴋʜᴜsʜ ꭙ ꝛσʙσᴛ˼🫧",
   "description": "ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴘʏᴛʜᴏɴ ᴡɪᴛʜ ᴘʏʀᴏɢʀᴀᴍ ᴀɴᴅ ᴘʏ-ᴛɢᴄᴀʟʟs.",
-  "logo": "https://telegra.ph/file/43b46c02ace4d9b83c96f.jpg",
+  "logo": "https://telegra.ph/file/69862e93c57666e0c63e7.jpg",
   "keywords": [
   "python3",
   "telegram",
   "bot",
-  "Champu",
+  "Rockhush",
   "MusicBot",
   "telegram-bot",
   "pyrogram"
@@ -38,7 +38,7 @@
         "required": true
       },
       "STRING_SESSION": {
-        "description": "ᴀ ᴘʏʀᴏɢʀᴀᴍ ᴠ𝟸 sᴛʀɪɴɢ sᴇssɪᴏɴ ғʀᴏᴍ @ChampuStringBot ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ. ",
+        "description": "ᴀ ᴘʏʀᴏɢʀᴀᴍ ᴠ𝟸 sᴛʀɪɴɢ sᴇssɪᴏɴ ғʀᴏᴍ @RockhushhRobot ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ. ",
         "value": "",
         "required": true
       },
@@ -53,7 +53,7 @@
         "required": false
       },
       "START_IMG_URL": {
-        "description": "ғɪʟʟ ʜᴇʀᴇ ʏᴏᴜʀ sᴛᴀʀᴛ ɪᴍᴀɢᴇ ᴜʀʟ, ɢᴇᴛ ɪᴛ ғʀᴏᴍ @TheChampuBot ᴜsɪɴɢ /tgm ᴄᴏᴍᴍᴀɴᴅ",
+        "description": "ғɪʟʟ ʜᴇʀᴇ ʏᴏᴜʀ sᴛᴀʀᴛ ɪᴍᴀɢᴇ ᴜʀʟ, ɢᴇᴛ ɪᴛ ғʀᴏᴍ @RockhushhRobot ᴜsɪɴɢ /tgm ᴄᴏᴍᴍᴀɴᴅ",
         "value": "",
         "required": true
       },
@@ -73,12 +73,12 @@
         "required": false
       },
       "PING_IMG_URL": {
-        "description": "ғɪʟʟ ʜᴇʀᴇ ʏᴏᴜʀ ᴘɪɴɢ ɪᴍᴀɢᴇ ᴜʀʟ, ɢᴇᴛ ɪᴛ ғʀᴏᴍ @TheChampuBot ᴜsɪɴɢ /tgm ᴄᴏᴍᴍᴀɴᴅ.",
+        "description": "ғɪʟʟ ʜᴇʀᴇ ʏᴏᴜʀ ᴘɪɴɢ ɪᴍᴀɢᴇ ᴜʀʟ, ɢᴇᴛ ɪᴛ ғʀᴏᴍ @RockhushhRobot ᴜsɪɴɢ /tgm ᴄᴏᴍᴍᴀɴᴅ.",
         "value": "",
         "required": false
       },
       "STATS_IMG_URL": {
-        "description": "ғɪʟʟ ʜᴇʀᴇ ʏᴏᴜʀ sᴛᴀᴛs ɪᴍᴀɢᴇ ᴜʀʟ, ɢᴇᴛ ɪᴛ ғʀᴏᴍ @TheChampuBot ᴜsɪɴɢ /tgm ᴄᴏᴍᴍᴀɴᴅ.",
+        "description": "ғɪʟʟ ʜᴇʀᴇ ʏᴏᴜʀ sᴛᴀᴛs ɪᴍᴀɢᴇ ᴜʀʟ, ɢᴇᴛ ɪᴛ ғʀᴏᴍ @RockhushhRobot ᴜsɪɴɢ /tgm ᴄᴏᴍᴍᴀɴᴅ.",
         "value": "",
         "required": false
       },
