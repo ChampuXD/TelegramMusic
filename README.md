@@ -11,7 +11,7 @@
 
 [˹✮͜͡♔ ̶͢ ̶ͨ ̶ͧ ̶ͭ ̶ͤᴋɪɴɢ❥͜࿐˼](https://t.me/kings_rocky)
 <h3 align="center">
-<a href="https://github.com/TheChampu"><img alt="Website" src="https://img.shields.io/badge/✮͜͡♔ ̶͢ ̶ͨ ̶ͧ ̶ͭ ̶ͤᴋɪɴɢ❥͜࿐-red"></a>
+<a href="https://github.com/Rockhush237/ChampuMusic"><img alt="Website" src="https://img.shields.io/badge/✮͜͡♔ ̶͢ ̶ͨ ̶ͧ ̶ͭ ̶ͤᴋɪɴɢ❥͜࿐-red"></a>
 
 
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://telegram.me/kings_rocky)
@@ -26,8 +26,8 @@
 <a href="https://www.youtube.com/@ShivanshuDeo"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>  
 </a></p>
 <p align="center">
-<a href="https://github.com/ChampuXD/ChampuMusic"><img src="https://img.shields.io/github/stars/ChampuXD/ChampuMusic?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
-<a href="https://github.com/ChampuXD/ChampuMusic/network/members"> <img src="https://img.shields.io/github/forks/ChampuXD/ChampuMusic?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
+<a href="https://github.com/Rockhush237/ChampuMusic"><img src="https://img.shields.io/github/stars/ChampuXD/ChampuMusic?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
+<a href="https://github.com/Rockhush237/ChampuMusic/network/members"> <img src="https://img.shields.io/github/forks/ChampuXD/ChampuMusic?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
 <a href="https://github.com/ChampuXD/ChampuMusic/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
 <a href="https://www.python.org/"> <img src="https://img.shields.io/badge/Written%20in-Python-skyblue?style=for-the-badge&logo=python" alt="Python" /> </a>
 <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=white&label=telethon&logo=python&logoColor=blue&style=for-the-badge" /></a>
