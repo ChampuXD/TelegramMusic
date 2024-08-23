@@ -29,7 +29,7 @@ EXTRA_PLUGINS = getenv(
 # Fill True if you want to load extra plugins
 EXTRA_PLUGINS_REPO = getenv(
     "EXTRA_PLUGINS_REPO",
-    "https://github.com/TheChampu/MusicPlugins",
+    "https://github.com/Rockhush237/MusicPlugins",
 )
 # Fill here the external plugins repo where plugins that you want to load
 # Your folder name in your extra plugins repo where all plugins stored
