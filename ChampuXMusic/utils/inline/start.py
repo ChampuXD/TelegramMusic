@@ -1,46 +1,65 @@
-from pyrogram.types import InlineKeyboardButton
+from typing import Union
+
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 import config
-from ChampuXMusic import app
 
 
-def start_panel(_):
+def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_1"], url=f"https://t.me/{app.username}?startgroup=true"
+                text="✦ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ◉‿◉",
+                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="☆ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs☆",
+                callback_data="settings_back_helper",
+            ),
+            InlineKeyboardButton(
+                text="sᴇᴛᴛɪɴɢs", callback_data="settings_helper"
             ),
         ],
-        [
-            InlineKeyboardButton(text="ʜᴇʟᴘ", callback_data="settings_back_helper"),
-            InlineKeyboardButton(text="sᴇᴛ", callback_data="settings_helper"),
-        ],
-        [
-            InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_CHAT),
-        ],
-    ]
+     ]
     return buttons
 
 
-def private_panel(_):
+def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_1"],
-                url=f"https://t.me/{app.username}?startgroup=true",
+                text="✦ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ◉‿◉",
+                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
-        ],
-        [
-            InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_CHAT),
-            InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL),
         ],
         [
             InlineKeyboardButton(
-                text=_["S_B_4"], callback_data="settings_back_helper"
+                text="❣ᴄʜᴀᴛ ɢʀᴏᴜᴘ❣🥀", url=config.SUPPORT_GROUP
+            ),
+            InlineKeyboardButton(
+                text="ᴏᴡɴᴇʀ͡° ͜ʖ ͡°", user_id=OWNER
             )
         ],
-        [
-            InlineKeyboardButton(text=_["S_B_3"], user_id=config.OWNER_ID),
+         [
+            InlineKeyboardButton(
+                text="☆ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs☆", callback_data="settings_back_helper"
+            )
         ],
-    ]
+         [
+            InlineKeyboardButton(
+                text="ᴄʜᴀɴɴᴇʟ͡° ͜ʖ ͡°💘", url=f"https://t.me/rockhushh"
+            ),
+            InlineKeyboardButton(
+
+                text="ᴅᴇᴠʟᴏᴘᴇʀ✶❍", url=f"https://t.me/Rockhush_13Ra_kinG"
+             ),
+          ],
+          [
+            InlineKeyboardButton(
+                text="☆ ᴀʙᴏᴜᴛ ʀᴏᴄᴋʜᴜsʜ ☆", url=f"https://t.me/about_Rockhush"
+            ),
+          ],
+     ]
     return buttons
